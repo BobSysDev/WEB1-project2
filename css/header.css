@@ -1,0 +1,32 @@
+.navbar {
+    height: 50px;
+  }
+
+  .navbar {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar-brand {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar-toggler {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar-nav {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-link {
+    padding: 0.5rem 1rem;
+    margin: 0;
+  }
+  
+  .container{
+    color: #F58800;
+  }
