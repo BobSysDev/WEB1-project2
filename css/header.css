@@ -1,21 +1,18 @@
-
-.navbar{
-
-  background: -moz-linear-gradient(15deg,  #F58800 0%, #F58800 50%, #D37500 50%, #D37500 100%); 
-  background: -webkit-linear-gradient(15deg,  #F58800 0%,#F58800 50%,#D37500 50%,#D37500 100%); 
-  background: linear-gradient(15deg,  #F58800 0%,#F58800 50%,#D37500 50%,#D37500 100%); 
-  
-  }
-
-  .navbar-brand .Logo{
-  width: 100px;
-  height: auto;
-}
-
 .navbar {
-  padding: 0px; 
+
+  background: -moz-linear-gradient(15deg, #F58800 0%, #F58800 50%, #D37500 50%, #D37500 100%);
+  background: -webkit-linear-gradient(15deg, #F58800 0%, #F58800 50%, #D37500 50%, #D37500 100%);
+  background: linear-gradient(15deg, #F58800 0%, #F58800 50%, #D37500 50%, #D37500 100%);
+  height: auto;
+  padding: 0px;
   height: 50px;
 }
+
+.navbar-brand .Logo {
+  width: 100px;
+  height: 55px;
+}
+
 .navbar-brand img {
   padding: 0px;
   height: 50px;
@@ -27,24 +24,23 @@
 }
 
 .navbar-nav .nav-link {
-  color: #FFFFFF; 
-  transition: background-color 0.3s, color 0.3s; 
+  color: #FFFFFF;
+  transition: background-color 0.3s, color 0.3s;
   font-size: 14px;
-  padding: 20px; 
+  padding: 20px;
 }
 
 .navbar-nav .nav-link:hover {
-  background-color: #FFFFFF; 
-  color: #F58800; 
+  background-color: #FFFFFF;
+  color: #F58800;
 }
 
-.nav-item .dropdown{
+.nav-item .dropdown {
   color: #FFFFFF;
   content: "";
   border-top: 10px solid;
   transition: transform 0.3s;
 }
-
 
 
 .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
@@ -53,26 +49,27 @@
 
 .navbar-nav .dropdown-menu {
   display: none;
-  background-color: #FFFFFF; 
-  border-radius: 0; 
-  left: auto; 
-  right: 0px; 
+  background-color: #FFFFFF;
+  border-radius: 0;
+  left: auto;
+  right: 0px;
   padding: 0px;
   margin: 0px;
   text-align: center;
   font-size: 14px;
-  transition: opacity 0.3s; 
+  transition: opacity 0.3s;
 }
 
 .navbar-nav .dropdown-menu:hover {
   display: block;
-  opacity: 1; 
+  opacity: 1;
 }
 
 .navbar-nav .projects-dropdown-toggle:checked .dropdown-toggle .dropdown-menu {
   border: none;
   box-shadow: none;
 }
+
 .navbar-nav .dropdown-item {
   color: #F58800;
   transition: background-color 0.3s, color 0.3s;
@@ -92,12 +89,12 @@
   display: block;
 }
 
-.UK{
+.UK {
   width: 10px;
   height: 10px;
 }
 
-.DK{
+.DK {
   width: 15px;
   height: 15px;
 }
