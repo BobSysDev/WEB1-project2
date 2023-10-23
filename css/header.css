@@ -1,32 +1,24 @@
+.bg-orange {
+  background-color: #FFA500; 
+}
 .navbar {
-    height: 50px;
-  }
+  padding: 0px; 
+}
+.navbar-brand img {
+  padding: 0px;
+  height: 100px;
+  width: 50px;
+}
+.navbar-nav {
+  margin-left: 400px;
+}
 
-  .navbar {
-    padding: 0;
-    margin: 0;
-  }
-  
-  .navbar-brand {
-    padding: 0;
-    margin: 0;
-  }
-  
-  .navbar-toggler {
-    padding: 0;
-    margin: 0;
-  }
-  
-  .navbar-nav {
-    padding: 0;
-    margin: 0;
-  }
-  
-  .nav-link {
-    padding: 0.5rem 1rem;
-    margin: 0;
-  }
-  
-  .container{
-    color: #F58800;
-  }
+.navbar-nav .nav-link {
+  color: #FFFFFF; 
+  transition: background-color 0.3s, color 0.3s; 
+  font-size: 14px; 
+}
+.navbar-nav .nav-link:hover {
+  background-color: #FFFFFF; 
+  color: #FFA500; 
+}
