@@ -1,3 +1,4 @@
+
 .circle {
     width: 100px;
     height: 100px;
@@ -5,21 +6,278 @@
     border-radius: 50%;
     display: flex;
     justify-content: center;
-    font-weight: bold;
-    border: 3px solid #FFFF00;
+    border: 2px solid #FFFF00;
   }
 
   .card{
     background-color: #F58800;
+    min-height: 450px;
+    max-height: 450px;
+    overflow: hidden;
+    border: 1px solid #F58800;
   }
 
   .card-body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 25px;
   }
 
-  .card img{
+  .card-text{
+    margin-top: 10px;
+    color: #FFFFFF;
+    font-size: 22px;
+    line-height: 1.3em;
+  }
+
+  .card-title{
+    font-size: 30px !important; 
+    font-weight: bold;
+    color: #FFFFFF;
+    padding: 20px 0 0 0 ;
+  }
+
+  .helmet{
     width: 65%;
     height: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 13px;
   }
+
+  .hammer{
+    width: 65%;
+    height: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 14px;
+  }
+
+  .truck{
+    width: 65%;
+    height: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 19px;
+  }
+
+  .house{
+    width: 65%;
+    height: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 13px;
+  }
+
+  .hammer {
+    margin-top: 15px;
+  }
+
+  .lower-card{
+    margin-top: 80px;
+  }
+
+  .title-pad-page{
+    padding: 40px 20px;
+  }
+
+  .mb-80{
+    margin-bottom: 80px;
+  }
+
+  .outline-none{
+    outline: none !important;
+  }
+
+  .card:hover{
+    background-color: #FFFFFF;
+    border: 1px solid lightgray;
+    transition: 0.6s;
+    color: black !important;
+  }
+
+  .card:hover .card-text, .card:hover .card-title{
+    color: black !important;
+    transition: 0.6s;
+  }
+
+  .card:hover .circle{
+    border: 2px solid #CCC;
+    transition: 0.6s;
+  }
+
+
+
+
+/*-----------------popup-----------------*/
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    overflow-x: scroll;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 70%;
+    position: relative;
+    transition: all 1s;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+  }
+
+  .popup .close {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    transition: all 200ms;
+    font-size: 60px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color:  #F58800;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+  
+  @media screen and (max-width: 768px){
+    .box{
+      width: 90%;
+    }
+    .popup{
+      width: 90%;
+    }
+  }
+
+  /*-----------------end-----------------*/
+
+
+
+@media (max-width: 1399.98px) { 
+
+    .card-text{
+        font-size: 20px; 
+      }
+
+      .card{
+        min-height: 480px;
+        max-height: 480px;
+      }
+
+}
+
+@media (max-width: 1199.98px) { 
+
+    .wd-50{
+        width: 50%;
+    }
+
+    .card-text{
+        font-size: 24px; 
+      }
+ }
+
+@media (max-width: 991.98px) { 
+
+    .card-title{
+        font-size: 30px !important; 
+      
+      }
+
+      .card-text{
+        font-size: 20px;
+        line-height: 1.3em;
+      }
+
+      .card:hover, .card:hover .card-text, .card:hover .card-title, .card:hover .circle{
+        transition: 0s;
+      }
+
+}
+
+@media (max-width: 767.98px) { 
+
+    .wd-50{
+        width: inherit;
+    }
+
+    .mt-sm-4{
+        margin-top: 0px !important;
+    }
+
+    .lower-card{
+        margin-top: 0px !important;
+    }
+
+    .card{
+        margin-bottom: 30px;
+    }
+
+    .mb-80{
+        margin-bottom: 30px;
+    }
+
+    .card-text {
+        font-size: 24px;
+        line-height: 1.3em;
+    }
+
+    .card{
+        min-height: 400px;
+        max-height: 400px;
+      }
+
+      .circle {
+        width: 150px;
+        height: 150px;
+      }
+
+      .helmet {
+        margin-top: 21px;
+    }
+
+    .hammer{
+        margin-top: 22px;
+      }
+    
+      .truck{
+        margin-top: 19px;
+      }
+    
+      .house{
+
+        margin-top: 21px;
+      }
+ }
+
+ @media (min-width: 360px) and (max-width: 575.98px) { 
+
+    .card{
+        min-height: 450px;
+        max-height: 450px;
+      }
+
+ }
