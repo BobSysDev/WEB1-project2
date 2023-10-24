@@ -1,0 +1,47 @@
+:root{
+    /* Colors */
+
+    --accent-color-main: rgb(245, 136, 0);
+    --accent-color-main-transparent: rgba(245, 136, 0, 0.7);
+    --accent-color-main-darker: rgb(211, 117, 0);
+    --font-color-light: rgb(255, 255, 255);
+    --font-color-dark: rgb(0, 15, 8);
+    --accent-color-secondary: rgb(217, 217, 217);
+    --image-highlight-tint-color: rgba(0, 0, 0, 0.6);
+
+    /* Font sizes */
+    --header-1: 48px;
+    --header-2: 36px;
+    --header-3: 24px;
+    --paragraph: 24px;
+}
+
+/* Medium devices (tablets, less than 992px) - We're using same font-sizes for mobile as well*/
+@media (max-width: 991.98px) {
+    :root{
+        --header-1: 36px;
+        --header-2: 24px;
+        --header-3: 18px;
+        --paragraph: 18px;
+    }
+
+    .add-top-margin{
+        margin-top: 10px;
+    }
+}
+
+.hide-border{
+    border: none;
+}
+
+.searchbar{
+    margin: 10px;
+    padding: 10px;
+    background-color: var(--accent-color-secondary);
+    border-radius: 5px;
+}
+
+.button-fix:hover, .button-fix:active, .button-fix:focus{
+    background-color: var(--accent-color-main-darker) !important;
+    outline: none;
+}
