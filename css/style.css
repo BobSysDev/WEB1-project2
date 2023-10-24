@@ -180,7 +180,7 @@ body {
     background-color: #F58800;
     border-color: #F58800;
 }
-img {
+.recent-row img {
     max-width: 100%;
 }
 
@@ -198,9 +198,21 @@ img {
     background-color: rgb(147, 147, 255);
 }
 
-.recent-img {
-    width: max-content;
+/* .recent-img {
+    position: relative;
     
+} */
+
+/* .recent-row {
+    height: 500px;
+} */
+
+.recent-col {
+    height: 450px;
+}
+
+.recent-col-img-1 {
+    background-image: url(../img/recent.jpg);
 }
 
 .top {
@@ -222,4 +234,36 @@ img {
 
 .services-btn {
     font-size: 30px;
+}
+
+.review {
+    display: flex;
+}
+
+.ball {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    text-align: center;
+    border-radius: 60px;
+    
+
+}
+
+.star {
+    width: 250px;
+}
+
+/* .review-photo {
+    height: 150px;
+    width: auto;
+} */
+
+/* .card-size {
+    height: 100px;
+} */
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
 }
