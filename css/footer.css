@@ -15,13 +15,13 @@ footer h6 {
 
 footer p {
     margin: 0;
-    font-size: 10px; 
+    font-size: 15px;
 }
 
 footer a {
     color: #fff;
     text-decoration: none;
-    font-size: 10px; 
+    font-size: 15px;
 }
 
 footer a:hover {
@@ -29,12 +29,44 @@ footer a:hover {
 }
 
 footer .btn {
-    font-size: 16px; 
+    font-size: 15px;
     margin: 2px; 
     text-decoration: none;
     color: #fff;
 }
 
-.text-white{
-font-size: 10px;
+footer  .text-white{
+font-size: 15px;
+}
+
+footer .text-right
+{
+    text-align: right !important;
+}
+
+footer .text-hover-orange:hover
+{
+    color: #F58800;
+}
+
+@media (max-width: 991.98px) {
+    footer .text-right
+    {
+        text-align: center !important;
+    }
+
+}
+
+@media (max-width: 767.98px) {
+    footer .text-right
+    {
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    footer.text-sm-center
+    {
+        text-align: center !important;
+    }
 }
