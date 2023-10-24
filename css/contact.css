@@ -77,12 +77,26 @@ form,
 	color: var();
 }
 
+.address-row {
+	display: flex;
+	flex-direction: row;
+}
+
 .address {
 	padding-bottom: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .address div {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+@media only screen and (max-width: 992px) {
+	.address-row {
+		flex-direction: column-reverse;
+	}
 }
