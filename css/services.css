@@ -8,8 +8,9 @@
     justify-content: center;
     color: white;
     font-weight: bold;
+    border-color: yellow;
   }
 
-  .card {
+  .card-body {
     background-color: black;
   }
