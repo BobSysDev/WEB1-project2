@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root{
+    /* Colors */
+
+    --accent-color-main: rgb(245, 136, 0);
+    --accent-color-main-transparent: rgba(245, 136, 0, 0.7);
+    --accent-color-main-darker: rgb(211, 117, 0);
+    --font-color-light: rgb(255, 255, 255);
+    --font-color-dark: rgb(0, 15, 8);
+    --accent-color-secondary: rgb(217, 217, 217);
+    --image-highlight-tint-color: rgba(0, 0, 0, 0.6);
+
+    /* Font sizes */
+    --header-1: 48px;
+    --header-2: 36px;
+    --header-3: 24px;
+    --paragraph: 24px;
+}
+
+/* Medium devices (tablets, less than 992px) - We're using same font-sizes for mobile as well*/
+@media (max-width: 991.98px) {
+    :root{
+        --header-1: 36px;
+        --header-2: 24px;
+        --header-3: 18px;
+        --paragraph: 18px;
+    }
+}
+
+*{
+    font-family: 'Lato', sans-serif;
+    color: var(--font-color-dark);
+}
+
+.light_text{
+    color: var(--font-color-light);
+}
+
+.dark_text{
+    color: var(--font-color-dark);
+}
+
+p{
+    font-size: var(--paragraph);
+    font-weight: 400;
+}
+
+h1{
+    font-size: var(--header-1);
+    font-weight: 700;
+}
+
+h2{
+    font-size: var(--header-2);
+    font-weight: 700;
+}
+
+h3{
+    font-size: var(--header-3);
+    font-weight: 300;
+}
+
+.bg-accent-main{
+    background-color: var(--accent-color-main);
+}
+
+.bg-accent-main-transparent{
+    background-color: var(--accent-color-main-transparent);
+}
+
+.bg-accent-main-darker{
+    background-color: var(--accent-color-main-darker);
+}
+
+.bg-accent-secondary{
+    background-color: var(--accent-color-secondary);
+}
+
+.bg-image-highlight{
+    background-color: var(--image-highlight-tint-color);
+}
