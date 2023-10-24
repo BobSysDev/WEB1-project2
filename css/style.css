@@ -25,5 +25,19 @@ img {
     margin-top: 7px;
 }
 .pen img {
+    height: 100%;
     width: 100%;
+}
+
+.services {
+    font-size: 70px;
+    margin-top: 30px;
+}
+
+.services-text {
+    font-size: 25px;
+}
+
+.services-btn {
+    font-size: 30px;
 }
