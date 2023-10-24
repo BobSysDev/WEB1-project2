@@ -1,16 +1,20 @@
 .circle {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     background-color: #FFFFFF; 
     border-radius: 50%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    color: white;
     font-weight: bold;
-    border-color: yellow;
+    border: 3px solid #FFFF00;
   }
 
-  .card-body {
-    background-color: black;
+  .card{
+    background-color: #F58800;
+  }
+
+  .card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
