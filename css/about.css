@@ -1,0 +1,12 @@
+@import url(primary.css);
+
+.about-box div,
+.history-box div {
+	margin: 50px 10%;
+}
+
+.about-box h2,
+.history-box h2 {
+	text-align: center;
+	margin-bottom: 50px;
+}
