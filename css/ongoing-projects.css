@@ -284,3 +284,50 @@ h3.card-tal-tall{
         background-size: cover;
     }
   }
+
+  .price{
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  @media screen and (max-width: 1399.98px) {
+    .price{
+        font-size: 14px !important;
+    }
+  }
+
+  @media screen and (max-width: 1199.98px){
+    .price{
+        font-size: 12px !important;
+    }
+  }
+
+  @media screen and (max-width: 767.98px){
+    .price{
+        font-size: 18px !important;
+    }
+  }
+
+  @media screen and (max-width: 459.98px){
+    .price{
+        font-size: 14px !important;
+    }
+  }
+
+  @media screen and (max-width: 379.98px){
+    .price{
+        font-size: 12px !important;
+    }
+  }
+
+  @media screen and (max-width: 343.98px){
+    .price{
+        font-size: 10px !important;
+    }
+  }
+
+  @media screen and (max-width: 1199.98px) and (min-width: 992px){
+    .card-title{
+        font-size: 32px !important;
+    }
+  }
