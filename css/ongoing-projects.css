@@ -30,6 +30,8 @@
     }
 }
 
+/* Functional classes for mostly div-s that re-style them */
+
 .hide-border{
     border: none;
 }
@@ -74,6 +76,8 @@
     text-align: center;
 }
 
+/* Classes for headers to make them more responsive so that more content can be fitted onto the cards */
+
 h2.card-tal{
     font-size: 24px;
 }
@@ -90,6 +94,8 @@ h3.card-tal-tall{
     font-size: 24px;
     font-weight: 400;
 }
+
+/* And their continuation, but below the L bootstrap breakpoint */
 
 @media screen and (max-width: 1199.98px) {
     h2.card-tal{
@@ -109,6 +115,8 @@ h3.card-tal-tall{
     }
 
 }
+
+/* more div stylings */
 
 .card-content-height{
     height: 60px;
@@ -132,7 +140,6 @@ h3.card-tal-tall{
 
 .border-radius-5-right{
     border-radius: 0 5px 5px 0;
-    /* border-left: 5px solid var(--accent-color-main); */
 }
 
 .boredr-radius-5-all{
@@ -146,7 +153,7 @@ h3.card-tal-tall{
     margin-top: 20px;
     margin-bottom: 20px;
     height: 80px;
-    z-index: 9999;
+    z-index: 1;
     border-radius: 5px;
 }
 
@@ -157,7 +164,7 @@ h3.card-tal-tall{
     margin-top: 20px;
     margin-bottom: 20px;
     height: 20px;
-    z-index: 9999;
+    z-index: 1;
     border-radius: 5px;
 }
 
@@ -193,14 +200,6 @@ h3.card-tal-tall{
     background-position: center;
 }
 
-.img-tint{
-    background-color: transparent;
-}
-
-.img-tint:hover{
-    background-color: var(--image-highlight-tint-color);
-}
-
 @media screen and (max-width: 425px){
     .fit-adj{
         font-size: 14px !important;
@@ -212,6 +211,8 @@ h3.card-tal-tall{
         line-height: 30px;
     }
 }
+
+/* The code that enables the hover-over behaviour for the card images, so that you can click them and see the modals */
 
 .image {
     height: 150px;
@@ -225,6 +226,8 @@ h3.card-tal-tall{
   .image::after {
     content: "Click here to read more";
     
+
+    /* A little easter egg from the development process */
     /* background: linear-gradient(90deg, rgba(255,0,0,1) 20%, rgba(245,255,0,1) 25%, rgba(0,255,68,1) 42%, rgba(0,254,255,1) 58%, rgba(128,0,255,1) 75%, rgba(255,0,241,1) 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
@@ -271,6 +274,8 @@ h3.card-tal-tall{
     text-decoration: none;
   }
 
+/* Yet another batch of divs with stylings */
+
   .card-title-height{
     height: 120px;
     line-height: 60px;
@@ -278,6 +283,8 @@ h3.card-tal-tall{
     justify-content: center;
     align-items: center;
   }
+
+/* Code to improve responsiveness on smaller devices */
 
   @media screen and (max-width: 767.98px) {
     .image{

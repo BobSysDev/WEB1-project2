@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- This HTML document was mostly done by Aleksander Gwóźdź, I'll note the elements that were done by somebody else from our group -->
+
+        <!-- Title of the webpage, the charset declaration and viewport re-scaling -->
         <title>WEB1-PROJECT2</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
 
-        <link href="css/footer.css" rel="stylesheet" type="text/css">
-        <link href="css/header.css" rel="stylesheet" type="text/css">
-        <link href="css/style.css" rel="stylesheet" type="text/css">
-        <link href="css/ongoing-projects.css" rel="stylesheet" type="text/css">
+        <!-- All of the CSS documents that are used on this page -->
+        <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css"> <!-- Bootstrap's CSS -->
+        <link href="css/footer.css" rel="stylesheet" type="text/css"> <!-- CSS for the footer - by Marius -->
+        <link href="css/header.css" rel="stylesheet" type="text/css"> <!-- CSS for the navbar - by Marius -->
+        <link href="css/style.css" rel="stylesheet" type="text/css"> <!-- One of the 2 files that manages our spacing and styles - by Samuel -->
+        <link href="css/ongoing-projects.css" rel="stylesheet" type="text/css"> <!-- The file that manages the styles of this particular page -->
         
-        <script src="scripts/bootstrap/bootstrap.bundle.min.js" type="text/javascript"></script>
+        <script src="scripts/bootstrap/bootstrap.bundle.min.js" type="text/javascript"></script> <!-- Bootstrap's JS -->
 
-        <link href="css/primary.css" rel="stylesheet" type="text/css">
+        <link href="css/primary.css" rel="stylesheet" type="text/css"> <!-- The file that manages the colors and font styles -->
     </head>
     <body>
-        <nav class="navbar navbar-expand-md navbar-light">
+        <!-- The navbar - by Marius -->
+        <nav class="navbar navbar-expand-md navbar-light"> 
             <div class="container">
               <a class="navbar-brand" href="#"><img src="images/BOB_horizontal_light.png" alt="Your Logo" class="Logo"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,8 +66,8 @@
             </div>
         </nav>
 
-        <div class="container">
-            <form class="searchbar">
+        <div class="container"> <!-- The container that holds all of the content on this page -->
+            <form class="searchbar"> <!-- The searchbar form, not functional as we don't use JS yet -->
                 <div class="row">
                     <div class="col-lg-4 col-md-12">
                         <div class="input-group form-floating">
@@ -97,10 +102,12 @@
                     </div>
                 </div>
             </form>
+
+            <!-- The divs holding cards ongoing projects -->
             <div class="row left-right-margin">
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
-                        <a href="#">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-id-000">
                             <div class="card-img-top image" style="background-image: url('images/ongoing-projects/house_proj_bob.png');"></div>
                         </a>
                         <div class="card-body bg-accent-main border-radius-5-down">
@@ -132,7 +139,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
-                        <a href="#">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-id-001">
                             <div class="card-img-top image" style="background-image: url('images/ongoing-projects/industrial_proj_bob.png');"></div>
                         </a>
                         <div class="card-body bg-accent-main border-radius-5-down">
@@ -164,7 +171,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
-                        <a href="#">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-id-002">
                             <div class="card-img-top image" style="background-image: url('images/ongoing-projects/road_proj_bob.png');"></div>
                         </a>
                         <div class="card-body bg-accent-main border-radius-5-down">
@@ -196,7 +203,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
-                        <a href="#">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-id-001">
                             <div class="card-img-top image" style="background-image: url('images/ongoing-projects/industrial_proj_bob.png');"></div>
                         </a>
                         <div class="card-body bg-accent-main border-radius-5-down">
@@ -228,7 +235,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
-                        <a href="#">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-id-001">
                             <div class="card-img-top image" style="background-image: url('images/ongoing-projects/industrial_proj_bob.png');"></div>
                         </a>
                         <div class="card-body bg-accent-main border-radius-5-down">
@@ -260,7 +267,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
-                        <a href="#">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-id-001">
                             <div class="card-img-top image" style="background-image: url('images/ongoing-projects/industrial_proj_bob.png');"></div>
                         </a>
                         <div class="card-body bg-accent-main border-radius-5-down">
@@ -293,7 +300,97 @@
             </div>
         </div>
 
-        <footer class="text-white text-md-start text-sm-center">
+        <!-- Modals that open up when you click the project's image - there are only 3 as we have only 3 types of dummy projects -->
+
+        <div>
+            <div class="modal fade" id="modal-id-000" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen-md-down modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h2 class="modal-title dark_text" id="exampleModalLabel">This guy's house</h2>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary bg-accent-main hide-border light_text button-fix" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div>
+            <div class="modal fade" id="modal-id-001" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen-md-down modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h2 class="modal-title dark_text" id="exampleModalLabel">Chernobyl power plant</h2>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary bg-accent-main hide-border light_text button-fix" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div>
+            <div class="modal fade" id="modal-id-002" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen-md-down modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h2 class="modal-title dark_text" id="exampleModalLabel">Middle-of-nowhere road</h2>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary bg-accent-main hide-border light_text button-fix" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+        <footer class="text-white text-md-start text-sm-center"> <!-- The footer - by Marius -->
         <div class="container p-4 pb-0">
 
                 <div class="row">
