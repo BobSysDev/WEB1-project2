@@ -238,7 +238,6 @@ h3.card-tal-tall{
     line-height: 40px;
     top: calc(-50% - 20px);
     text-align: center;
-    vertical-align: middle;
     width: 100%;
     left: 0;
     display: block;
@@ -338,3 +337,30 @@ h3.card-tal-tall{
         font-size: 32px !important;
     }
   }
+
+/* Styles needed by the project archive website - to align the text on smaller devices */
+
+  .project-archive-text-div{
+    height: 240px;
+    display: flex;
+    align-items: center;
+    line-height: 24px;
+  }
+
+  @media screen and (max-width: 1399.98px) {
+    .project-archive-text-div{
+        height: 300px;
+    }
+  }
+
+  @media screen and (max-width: 1199.98px) {
+    .project-archive-text-div{
+        height: 360px;
+    }
+  }
+
+    @media screen and (max-width: 991.98px) {
+        .project-archive-text-div{
+            height: 240px;
+        }
+    }
