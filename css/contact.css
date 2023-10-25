@@ -26,14 +26,32 @@ h4 {
 	margin: 50px;
 }
 
-form,
-.contact-left p,
-.address div {
-	margin: 0 15%;
+.contact-details {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	font-size: var(--paragraph);
+	margin-bottom: 100px;
 }
 
-.contact-left {
-	padding: 10% 0;
+.contact-details a {
+	text-decoration: none;
+	color: var(--accent-color-main);
+	font-weight: bold;
+}
+
+.contact-details span {
+	margin-bottom: 10px;
+}
+
+.contact-details p {
+	margin: 20px 0 30px;
+}
+
+form,
+.contact-left,
+.address div {
+	margin: 0 10%;
 }
 
 .form_box {
@@ -52,8 +70,7 @@ form,
 .form_box textarea {
 	width: 80%;
 	padding: 10px;
-	border: 1px solid var(--accent-color-main);
-	background-color: var(--accent-color-main-transparent);
+	background-color: var(--accent-color-secondary);
 	border-radius: 5px;
 	font-size: 16px;
 	margin-bottom: 20px;
@@ -100,7 +117,20 @@ form,
 	align-items: center;
 }
 
+.address p {
+	margin: 0 15% 50px;
+}
+
+.address span {
+	font-size: var(--paragraph);
+	font-style: italic;
+}
+
 @media only screen and (max-width: 992px) {
+	.contact-details {
+		margin-bottom: 50px;
+	}
+
 	.address-row {
 		flex-direction: column-reverse;
 	}
