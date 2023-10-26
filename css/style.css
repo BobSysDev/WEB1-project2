@@ -1,0 +1,87 @@
+.recent-row img {
+    max-width: 100%;
+}
+
+
+.backg-orange {
+    background-color: #f58800;
+}
+
+.col-grey {
+    background-color: #989898;
+}
+.recent-projects {
+    /* width: 50px; */
+    height: 300px;
+    background-color: rgb(147, 147, 255);
+}
+
+/* .recent-img {
+    position: relative;
+    
+} */
+
+/* .recent-row {
+    height: 500px;
+} */
+
+.recent-col {
+    height: 450px;
+}
+
+.recent-col-img-1 {
+    background-image: url(../img/recent.jpg);
+}
+
+.top {
+    margin-top: 7px;
+}
+.pen img {
+    height: 100%;
+    width: 100%;
+}
+
+.services {
+    font-size: 70px;
+    margin-top: 30px;
+}
+
+.services-text {
+    font-size: 25px;
+}
+
+.services-btn {
+    font-size: 30px;
+}
+
+.review {
+    display: flex;
+}
+
+.ball {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    text-align: center;
+    border-radius: 60px;
+    
+
+}
+
+.star {
+    width: 250px;
+}
+
+/* .review-photo {
+    height: 150px;
+    width: auto;
+} */
+
+/* .card-size {
+    height: 100px;
+} */
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}

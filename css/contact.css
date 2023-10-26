@@ -1,0 +1,157 @@
+@import url(primary.css);
+
+/* Reset default styles for all elements */
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	max-width: 100%;
+}
+
+/* Apply styles to the HTML and body elements */
+html,
+body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+h2,
+h4 {
+	text-align: center;
+	margin: 50px;
+}
+
+.row-padding > * {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.contact-details {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	font-size: var(--paragraph);
+	margin-bottom: 100px;
+}
+
+.contact-details a {
+	text-decoration: none;
+	color: var(--accent-color-main);
+	font-weight: bold;
+}
+
+.contact-details span {
+	margin-bottom: 10px;
+}
+
+.contact-details p {
+	margin: 20px 0 30px;
+}
+
+form,
+.contact-left,
+.address div {
+	margin: 0 10% 50px;
+}
+
+.form_box {
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.form_box label {
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.form_box input[type="text"],
+.form_box input[type="email"],
+.form_box textarea {
+	width: 80%;
+	padding: 10px;
+	background-color: var(--accent-color-secondary);
+	border-radius: 5px;
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+
+.form_box textarea {
+	resize: vertical;
+}
+
+.form_box button {
+	background-color: var(--accent-color-main);
+	color: var(--font-color-light);
+	border: solid 1px var(--accent-color-main);
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 5px;
+	font-weight: bold;
+	display: block;
+	margin: auto;
+}
+
+.form_box button:hover {
+	background-color: var(--font-color-light);
+	color: var(--accent-color-main);
+}
+
+.address-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.map {
+	flex: 50%;
+	display: flex;
+}
+
+.map iframe {
+	min-width: 100%;
+	min-height: 500px;
+	object-fit: cover;
+}
+
+.address {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.address div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.address p {
+	margin: 0 15% 50px;
+}
+
+.address span {
+	font-size: var(--paragraph);
+	font-style: italic;
+}
+
+@media only screen and (min-width: 992px) {
+	.address h2 {
+		margin-top: 0;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.contact-details {
+		margin-bottom: 0;
+	}
+
+	.address-row {
+		flex-direction: column-reverse;
+	}
+}
