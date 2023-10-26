@@ -64,6 +64,10 @@ h3{
     background-color: var(--accent-color-main);
 }
 
+.border-accent-main{
+    border-color: var(--accent-color-main);
+}
+
 .bg-accent-main-transparent{
     background-color: var(--accent-color-main-transparent);
 }
@@ -79,3 +83,4 @@ h3{
 .bg-image-highlight{
     background-color: var(--image-highlight-tint-color);
 }
+

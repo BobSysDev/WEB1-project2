@@ -1,0 +1,366 @@
+:root{
+    /* Colors */
+
+    --accent-color-main: rgb(245, 136, 0);
+    --accent-color-main-transparent: rgba(245, 136, 0, 0.7);
+    --accent-color-main-darker: rgb(211, 117, 0);
+    --font-color-light: rgb(255, 255, 255);
+    --font-color-dark: rgb(0, 15, 8);
+    --accent-color-secondary: rgb(217, 217, 217);
+    --image-highlight-tint-color: rgba(0, 0, 0, 0.75);
+
+    /* Font sizes */
+    --header-1: 48px;
+    --header-2: 36px;
+    --header-3: 24px;
+    --paragraph: 24px;
+}
+
+/* Medium devices (tablets, less than 992px) - We're using same font-sizes for mobile as well*/
+@media screen and (max-width: 991.98px) {
+    :root{
+        --header-1: 36px;
+        --header-2: 24px;
+        --header-3: 18px;
+        --paragraph: 18px;
+    }
+
+    .add-top-margin{
+        margin-top: 10px;
+    }
+}
+
+/* Functional classes for mostly div-s that re-style them */
+
+.hide-border{
+    border: none;
+}
+
+.searchbar{
+    margin: 10px;
+    padding: 10px;
+    background-color: var(--accent-color-secondary);
+    border-radius: 5px;
+}
+
+.left-right-margin{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.button-fix:hover, .button-fix:active, .button-fix:focus{
+    background-color: var(--accent-color-main-darker) !important;
+    outline: none;
+}
+
+.image-auto-resize{
+    max-width: 100%;
+    height: auto;
+}
+
+.bg-white{
+    background-color: white;
+}
+
+.tal-center{
+    text-align: center;
+}
+
+.card-tal{
+    line-height: 60px;
+    text-align: center;
+}
+
+.card-tal-tall{
+    line-height: 120px;
+    text-align: center;
+}
+
+/* Classes for headers to make them more responsive so that more content can be fitted onto the cards */
+
+h2.card-tal{
+    font-size: 24px;
+}
+
+h3.card-tal{
+    font-size: 18px;
+}
+
+h3.card-tal-tall{
+    font-size: 18px;
+}
+
+.highlight-hours{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+/* And their continuation, but below the L bootstrap breakpoint */
+
+@media screen and (max-width: 1199.98px) {
+    h2.card-tal{
+        font-size: 18px;
+    }
+
+    h3.card-tal{
+        font-size: 14px;
+    }
+
+    h3.card-tal-tall{
+        font-size: 14px;
+    }
+    
+    .highlight-hours{
+        font-size: 18px;
+    }
+
+}
+
+/* more div stylings */
+
+.card-content-height{
+    height: 60px;
+}
+
+.card-content-height-tall{
+    height: 120px;
+}
+
+.padding-5{
+    padding: 5px;
+}
+
+.border-radius-5-down{
+    border-radius: 0 0 5px 5px;
+}
+
+.border-radius-5-left{
+    border-radius: 5px 0 0 5px;
+}
+
+.border-radius-5-right{
+    border-radius: 0 5px 5px 0;
+}
+
+.boredr-radius-5-all{
+    border-radius: 5px;
+}
+
+.border-div-tall{
+    width: 2px !important;
+    padding: 0;
+    background-color: var(--accent-color-secondary);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 80px;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.border-div{
+    width: 2px !important;
+    padding: 0;
+    background-color: var(--accent-color-secondary);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 20px;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.margin-5{
+    margin: 1px;
+}
+
+@media screen and (max-width: 767.98px) {
+    .card-tal-tall{
+        line-height: 60px;
+        text-align: center;
+        padding: 0px !important;
+    }
+
+    .card-content-height-tall{
+        height: 60px;
+    }
+
+    .border-div-tall{
+        width: 2px !important;
+        padding: 0px;
+        background-color: var(--accent-color-secondary);
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: 20px;
+        z-index: 9999;
+        border-radius: 5px;
+    }
+}
+
+.height-120{
+    height: 150px;
+    background-position: center;
+}
+
+@media screen and (max-width: 425px){
+    .fit-adj{
+        font-size: 14px !important;
+    }
+}
+
+@media screen and (max-width: 361.98px){
+    .fit-adj{
+        line-height: 30px;
+    }
+}
+
+/* The code that enables the hover-over behaviour for the card images, so that you can click them and see the modals */
+
+.image {
+    height: 150px;
+    width: 100%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    border-radius: 5px, 5px, 0, 0;
+    background-position: center;
+  }
+  
+  .image::after {
+    content: "Click here to read more";
+    
+
+    /* A little easter egg from the development process */
+    /* background: linear-gradient(90deg, rgba(255,0,0,1) 20%, rgba(245,255,0,1) 25%, rgba(0,255,68,1) 42%, rgba(0,254,255,1) 58%, rgba(128,0,255,1) 75%, rgba(255,0,241,1) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+
+    color: white;
+    
+    font-size: 20px;
+    line-height: 40px;
+    top: calc(-50% - 20px);
+    text-align: center;
+    width: 100%;
+    left: 0;
+    display: block;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+  }
+  
+  .image::before {
+    content: "";
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--image-highlight-tint-color);
+    z-index: 1;
+    opacity: 0;
+    border-radius: 5px 5px 0 0;
+    transition: opacity 200ms ease-in-out;
+  }
+  
+  .image:hover::after, .image:hover::before {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+/* Yet another batch of divs with stylings */
+
+  .card-title-height{
+    height: 120px;
+    line-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+/* Code to improve responsiveness on smaller devices */
+
+  @media screen and (max-width: 767.98px) {
+    .image{
+        background-size: cover;
+    }
+  }
+
+  .price{
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  @media screen and (max-width: 1399.98px) {
+    .price{
+        font-size: 14px !important;
+    }
+  }
+
+  @media screen and (max-width: 1199.98px){
+    .price{
+        font-size: 12px !important;
+    }
+  }
+
+  @media screen and (max-width: 767.98px){
+    .price{
+        font-size: 18px !important;
+    }
+  }
+
+  @media screen and (max-width: 459.98px){
+    .price{
+        font-size: 14px !important;
+    }
+  }
+
+  @media screen and (max-width: 379.98px){
+    .price{
+        font-size: 12px !important;
+    }
+  }
+
+  @media screen and (max-width: 343.98px){
+    .price{
+        font-size: 10px !important;
+    }
+  }
+
+  @media screen and (max-width: 1199.98px) and (min-width: 992px){
+    .card-title{
+        font-size: 32px !important;
+    }
+  }
+
+/* Styles needed by the project archive website - to align the text on smaller devices */
+
+  .project-archive-text-div{
+    height: 240px;
+    display: flex;
+    align-items: center;
+    line-height: 24px;
+  }
+
+  @media screen and (max-width: 1399.98px) {
+    .project-archive-text-div{
+        height: 300px;
+    }
+  }
+
+  @media screen and (max-width: 1199.98px) {
+    .project-archive-text-div{
+        height: 360px;
+    }
+  }
+
+    @media screen and (max-width: 991.98px) {
+        .project-archive-text-div{
+            height: 240px;
+        }
+    }
