@@ -26,6 +26,11 @@ h4 {
 	margin: 50px;
 }
 
+.row-padding > * {
+	padding-right: 0;
+	padding-left: 0;
+}
+
 .contact-details {
 	text-align: center;
 	display: flex;
@@ -51,7 +56,7 @@ h4 {
 form,
 .contact-left,
 .address div {
-	margin: 0 10%;
+	margin: 0 10% 50px;
 }
 
 .form_box {
@@ -85,7 +90,6 @@ form,
 	color: var(--font-color-light);
 	border: solid 1px var(--accent-color-main);
 	padding: 10px 20px;
-	margin-bottom: 30px;
 	font-size: 16px;
 	cursor: pointer;
 	border-radius: 5px;
@@ -104,8 +108,18 @@ form,
 	flex-direction: row;
 }
 
+.map {
+	flex: 50%;
+	display: flex;
+}
+
+.map iframe {
+	min-width: 100%;
+	min-height: 500px;
+	object-fit: cover;
+}
+
 .address {
-	padding-bottom: 50px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
