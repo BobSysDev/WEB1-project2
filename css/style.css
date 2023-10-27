@@ -48,6 +48,8 @@
 
 .services-text {
     font-size: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .services-btn {
@@ -84,4 +86,11 @@
     margin: 0 auto; /* Added */
     float: none; /* Added */
     margin-bottom: 10px; /* Added */
+}
+
+.rcb:hover {
+    color: rgb(255, 255, 255);
+    background-color: #f8bc24;
+    border: 1px solid #f8bc24;
+
 }
