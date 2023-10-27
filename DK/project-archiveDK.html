@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- This HTML document was mostly done by Aleksander Gwóźdź, I'll note the elements that were done by somebody else from our group -->
+
+        <!-- Title of the webpage, the charset declaration and viewport re-scaling -->
+        <title>WEB1-PROJECT2</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- All of the CSS documents that are used on this page -->
+        <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css"> <!-- Bootstrap's CSS -->
+        <link href="css/footer.css" rel="stylesheet" type="text/css"> <!-- CSS for the footer - by Marius -->
+        <link href="css/header.css" rel="stylesheet" type="text/css"> <!-- CSS for the navbar - by Marius -->
+        <link href="css/style.css" rel="stylesheet" type="text/css"> <!-- One of the 2 files that manages our spacing and styles - by Samuel -->
+        <link href="css/ongoing-projects.css" rel="stylesheet" type="text/css"> <!-- The file that manages the styles of this particular page (re-used from ongoing projects as it's pretty much the same page, just with different content in the divs)-->
+        
+        <script src="scripts/bootstrap/bootstrap.bundle.min.js" type="text/javascript"></script> <!-- Bootstrap's JS -->
+
+        <link href="css/primary.css" rel="stylesheet" type="text/css"> <!-- The file that manages the colors and font styles -->
+    </head>
+    <body>
+        <!-- The navbar in Danish- by Marius -->
+        <<nav class="navbar navbar-expand-md navbar-light">
+            <div class="container">
+              <a class="navbar-brand" href="../DK/index.html"><img src="../images/BOB_horizontal_light.png" alt="Your Logo" class="Logo"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../DK/indexDK.html">Hjem</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../DK/aboutDK.html">Om</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../DK/servicesDK.html">Tjenester</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      Projekter
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="projectsDropdown">
+                      <a class="dropdown-item orange-underline" href="../DK/ongoing-projectsDK.html">Løbende projekter</a>
+                      <a class="dropdown-item orange-underline" href="../DK/project-archiveDK.html">Arkiv</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../DK/contactDK.html">Kontaktpersoner</a>
+                  </li>
+        
+                  <li class="nav-item-lang dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="contactsDropdown" role="button" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <img src="../images/denmark_6211400.png" alt="" class="DK">
+                    </a>
+                    <div class="dropdown-menu-lang dropdown-menu" aria-labelledby="contactsDropdown">
+                      <a class="dropdown-item" href="../index.html"><img src="../images/united-kingdom_555417.png" alt="" class="UK"></a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+        <div class="container"> <!-- The container that holds all of the content on this page -->
+
+            <div class="row"> <!-- The row that holds the title-->
+                <div class="col-12">
+                    <br>
+                    <h1 class="title tal-center">Project archive</h1>
+                </div>
+            </div>
+
+            <form class="searchbar"> <!-- The searchbar form, not functional as we don't use JS yet -->
+                <div class="row">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="input-group form-floating">
+                            <div class="form-floating">
+                                <input type="text" class="form-control hide-border" id="email" placeholder="Enter email" name="email">
+                                <label for="email">Project name</label>
+                            </div>
+                            <button class="btn btn-outline-secondary bg-accent-main hide-border light_text button-fix" type="button" id="button-addon2">Search</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="form-floating add-top-margin">
+                            <select class="form-select" aria-label="project-type" id="projectType">
+                                <option selected>Residential</option>
+                                <option value="1">Comercial</option>
+                                <option value="2">Industrial</option>
+                                <option value="3">Roadwork</option>
+                            </select>
+                            <label for="projectType">Select project type</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="form-floating add-top-margin">
+                            <select class="form-select" aria-label="project-type" id="projectType">
+                                <option selected>Alphabetically</option>
+                                <option value="1">Est. price (low to high)</option>
+                                <option value="2">Est. price (high to low)</option>
+                                <option value="3">Date of creation</option>
+                            </select>
+                            <label for="projectType">Sort by</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <!-- The divs holding cards past projects -->
+            <div class="row left-right-margin">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <img src="images/ongoing-projects/house_proj_bob.png" class="card-img-top" alt="...">
+                        <div class="card-body bg-accent-main border-radius-5-down">
+                            <div class="card-title-height">
+                                <h1 class="card-title light_text tal-center">The other guy's house</h1>
+                            </div>
+                            <h3 class="light_text tal-center">Residential</h3>
+                            <div class="row margin-5 justify-content-between bg-white rounded project-archive-text-div">
+                                <p>We are proud to have completed The Other Guy's House, a challenging but rewarding project. The house is now a beautiful and functional home for our client and his family.</p>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <img src="images/ongoing-projects/industrial_proj_bob.png" class="card-img-top" alt="...">
+                        <div class="card-body bg-accent-main border-radius-5-down">
+                            <div class="card-title-height">
+                                <h1 class="card-title light_text tal-center">Yoghurt factory</h1>
+                            </div>
+                            <h3 class="light_text tal-center">Industrial</h3>
+                            <div class="row margin-5 justify-content-between bg-white rounded project-archive-text-div">
+                                <p>We are proud to have completed the Yoghurt Factory, a complex project that is now producing delicious yoghurt for the local community.</p>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <img src="images/ongoing-projects/road_proj_bob.png" class="card-img-top" alt="...">
+                        <div class="card-body bg-accent-main border-radius-5-down">
+                            <div class="card-title-height">
+                                <h1 class="card-title light_text tal-center">A random road</h1>
+                            </div>
+                            <h3 class="light_text tal-center">Roadwork</h3>
+                            <div class="row margin-5 justify-content-between bg-white rounded project-archive-text-div">
+                                <p>We are proud to have completed A Random Road, a challenging project that is now providing a safe and convenient route for motorists and pedestrians.</p>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="text-white text-md-start text-sm-center">
+            <div class="container p-4 pb-0">
+    
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 pb-3">
+                            <h6 class="text-uppercase">Om os</h6>
+                            <p>
+                              Vores kerneværdier om sikkerhed, bæredygtighed og håndværk ligger til grund for hvert projekt, vi
+                              foretage. Vi er forpligtet til at bruge banebrydende teknologi og miljøvenlig praksis,
+                              sikre, at dit projekt ikke kun er bygget til at holde, men også bygget til at respektere
+                              miljø.
+                            </p>
+                        </div>
+                        <div class="col-lg-1 col-md-12"></div>
+                        <div class="col-lg-2 col-md-3 pb-3">
+                            <h6 class="text-uppercase">LINKS</h6>
+                            <p>
+                                <a href="../DK/indexDK.html">Hjem</a>
+                            </p>
+                            <p>
+                                <a href="../DK/aboutDK.html">Om</a>
+                            </p>
+                            <p>
+                                <a href="../DK/servicesDK.html">Tjenester</a>
+                            </p>
+                            <p>
+                                <a href="../DK/ongoing-projectsDK.html">Løbende projekter</a>
+                            </p>
+                            <p>
+                                <a href="../DK/project-archiveDK.html">Arkiv</a>
+                            </p>
+                        </div>
+    
+                        <div class="col-lg-3 col-md-6 pb-3">
+                            <h6 class="text-uppercase">
+                              Kontaktpersoner
+                            </h6>
+                            <p>
+                               <b> Adresse:</b> StreetMetropolis
+                            </p>
+                            <p>
+                                <b> Firma-telefon:</b> 1234-567
+                            </p>
+                            <p>
+                                <b> Kunde support: </b>9877-675
+                            </p>
+                            <p>
+                                <b> Email:</b>  <a class="text-white" href="mail:info@constructioncompany.com">info@constructioncompany.com</a>
+                            </p>
+                            <p>
+                                <b> Support: </b> <a class="text-white" href="mail:support@constructioncompany.com">support@constructioncompany.com</a>
+                            </p>
+    
+                        </div>
+    
+                        <div class="col-lg-2 col-md-3 pb-3">
+                            <h6 class="text-uppercase">Åbnet</h6>
+                            <p class="pb-2">
+                              Mandag-Fredag: <br><b>8:00 AM - 6:00 PM</b>
+                            </p>
+                            <p>
+                              Lørdag-Sunday: <br><b>Lukket</b>
+                            </p>
+                        </div>
+                    </div>
+    
+    
+                <hr class="my-3">
+    
+    
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 pt-2 pb-2 text-lg-start text-md-center text-center">
+    
+                            © 2023 <a class="text-white" href=""><b>BOBS CORPORATIONS</b></a>. All Rights Reserved.
+    
+                        </div>
+    
+                        <div class="col-lg-6 col-md-12 text-right text-center text-md-center">
+                            <!-- Facebook -->
+                            <a class="btn btn-outline-light btn-floating m-1 text-decoration-none text-hover-orange" role="button" href="https://www.facebook.com/">
+                                <i class="fab fa-facebook-f"></i> Facebook</a>
+                            
+    
+                            <!-- X -->
+                            <a class="btn btn-outline-light btn-floating m-1 text-decoration-none text-hover-orange" role="button" href="https://twitter.com/">
+                                <i class="fab fa-twitter"></i> X (Twitter)</a>
+                            
+    
+                            <!-- Google -->
+                            <a class="btn btn-outline-light btn-floating m-1 text-decoration-none text-hover-orange" role="button" href="https://google.com/">
+                                <i class="fab fa-google"></i> Google</a>
+                            
+    
+                            <!-- Instagram -->
+                            <a class="btn btn-outline-light btn-floating m-1  text-decoration-none text-hover-orange" role="button" href="https://www.instagram.com/">
+                                <i class="fab fa-instagram"></i> Instagram</a>
+                            
+                        
+                        </div>
+                    </div>
+    
+            </div>
+          </footer>
+    </body>
+</html>
