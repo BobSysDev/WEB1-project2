@@ -1,5 +1,3 @@
-/* This file contains our standards for fonts, colors and text sizes */
-
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 :root{
@@ -86,8 +84,3 @@ h3{
     background-color: var(--image-highlight-tint-color);
 }
 
-/* In some pages, the footer doesn't reach the end of the page. This class makes the container div's height larger so the footer is "pushed" to the end of the page */
-
-.container-height-fix{
-    min-height: calc(100vh - 100px) !important;
-}
