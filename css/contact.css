@@ -34,7 +34,7 @@ h4 {
 	padding-left: 0;
 }
 
-/* centers sotuff in the column  */
+/* centers stuff in the column  */
 .contact-details {
 	text-align: center;
 	display: flex;
@@ -111,6 +111,12 @@ form,
 	color: var(--accent-color-main);
 }
 
+/* grouo cntact styling */
+.group a {
+	font-weight: bold;
+	color: var(--font-color-light);
+}
+
 /* rewritten row into flex so that the map resizes correctly */
 .address-row {
 	display: flex;
@@ -128,18 +134,6 @@ form,
 	min-width: 100%;
 	min-height: 500px;
 	object-fit: cover;
-}
-
-.address {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-.address div {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 }
 
 .address p {
