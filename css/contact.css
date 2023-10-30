@@ -111,7 +111,11 @@ form,
 	color: var(--accent-color-main);
 }
 
-/* grouo cntact styling */
+/* group contact styling */
+.group {
+	padding: 0 5%;
+}
+
 .group a {
 	font-weight: bold;
 	color: var(--font-color-light);
@@ -147,7 +151,7 @@ form,
 
 /* tweaks to the mobile view */
 
-@media only screen and (min-width: 992px) {
+@media only screen and (max-width: 992px) {
 	.address h2 {
 		margin-top: 0;
 	}
