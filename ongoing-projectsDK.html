@@ -1,0 +1,505 @@
+<!--Translated by Marius Gafton-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- This HTML document was mostly done by Aleksander Gwóźdź, I'll note the elements that were done by somebody else from our group -->
+
+        <!-- Title of the webpage, the charset declaration and viewport re-scaling -->
+        <title>WEB1-PROJECT2</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- All of the CSS documents that are used on this page -->
+        <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css"> <!-- Bootstrap's CSS -->
+        <link href="css/footer.css" rel="stylesheet" type="text/css"> <!-- CSS for the footer - by Marius -->
+        <link href="css/header.css" rel="stylesheet" type="text/css"> <!-- CSS for the navbar - by Marius -->
+        <link href="css/style.css" rel="stylesheet" type="text/css"> <!-- One of the 2 files that manages our spacing and styles - by Samuel -->
+        <link href="css/ongoing-projects.css" rel="stylesheet" type="text/css"> <!-- The file that manages the styles of this particular page -->
+        
+        <script src="scripts/bootstrap/bootstrap.bundle.min.js" type="text/javascript"></script> <!-- Bootstrap's JS -->
+
+        <link href="css/primary.css" rel="stylesheet" type="text/css"> <!-- The file that manages the colors and font styles -->
+    </head>
+    <body>
+        <!-- The navbar in Danish- by Marius -->
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div class="container">
+              <a class="navbar-brand" href="indexDK.html"><img src="images/BOB_horizontal_light.png" alt="Your Logo" class="Logo"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="indexDK.html">Hjem</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="aboutDK.html">Om</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="servicesDK.html">Tjenester</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      Projekter
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="projectsDropdown">
+                      <a class="dropdown-item orange-underline" href="ongoing-projectsDK.html">Løbende projekter</a>
+                      <a class="dropdown-item orange-underline" href="project-archiveDK.html">Arkiv</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contactDK.html">Kontaktpersoner</a>
+                  </li>
+        
+                  <li class="nav-item-lang dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="contactsDropdown" role="button" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <img src="images/denmark_6211400.png" alt="" class="DK">
+                    </a>
+                    <div class="dropdown-menu-lang dropdown-menu" aria-labelledby="contactsDropdown">
+                      <a class="dropdown-item" href="index.html"><img src="images/united-kingdom_555417.png" alt="" class="UK"></a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+        <div class="container"> <!-- The container that holds all of the content on this page -->
+            
+            <div class="row"> <!-- The row that holds the title-->
+                <div class="col-12">
+                    <br>
+                    <h1 class="title tal-center">Igangværende projekter</h1>
+                </div>
+            </div>
+
+            <form class="searchbar"> <!-- The searchbar form, not functional as we don't use JS yet -->
+                <div class="row">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="input-group form-floating">
+                            <div class="form-floating">
+                                <input type="text" class="form-control hide-border" id="email" placeholder="Enter email" name="email">
+                                <label for="email">Projekt navn</label>
+                            </div>
+                            <button class="btn btn-outline-secondary bg-accent-main hide-border light_text button-fix" type="button" id="button-addon2">Søg</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="form-floating add-top-margin">
+                            <select class="form-select" aria-label="project-type" id="projectType">
+                                <option selected>Beboelse</option>
+                                <option value="1">Kommerciel</option>
+                                <option value="2">Industriel</option>
+                                <option value="3">Vejarbejde</option>
+                            </select>
+                            <label for="projectType">Vælg projekttype</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="form-floating add-top-margin">
+                            <select class="form-select" aria-label="project-type" id="projectType">
+                                <option selected>Alfabetisk</option>
+                                <option value="1">Est. pris (lav til høj)</option>
+                                <option value="2">Est. pris (høj til lav)</option>
+                                <option value="3">Dato for oprettelse</option>
+                            </select>
+                            <label for="projectType">Sorter efter</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <!-- The divs holding cards ongoing projects -->
+            <!-- The cards have inline styling with the background image so that it can be added in HTML instead of CSS - now I don't need like 6 classes for 6 cards, just one -->
+            <div class="row left-right-margin">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-id-000">
+                            <div class="card-img-top image" style="background-image: url('images/ongoing-projects/house_proj_bob.png');"></div>
+                        </a>
+                        <div class="card-body bg-accent-main border-radius-5-down">
+                            <div class="card-title-height">
+                                <h1 class="card-title light_text tal-center">Denne fyrs hus</h1>
+                            </div>
+                            <h3 class="light_text tal-center">Beboelse</h3>
+                            <div class="row margin-5 justify-content-between bg-white rounded">
+                                <div class="col-6 bg-white card-content-height border-radius-5-left">
+                                    <h2 class="tal-center card-tal">Est. pris: </h2>
+                                </div>
+                                <div class="col-1 border-div"></div>
+                                <div class="col-5 bg-white card-content-height border-radius-5-right">
+                                    <h3 class="tal-center card-tal price">69000 DKK</h3>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row margin-5 justify-content-between bg-white rounded">
+                                <div class="col-6 bg-white card-content-height-tall border-radius-5-left">
+                                    <h2 class="tal-center card-tal fit-adj">Mandetimer brugt: </h2>
+                                </div>
+                                <div class="col-1 border-div-tall"></div>
+                                <div class="col-5 bg-white card-content-height-tall border-radius-5-right">
+                                    <h3 class="tal-center card-tal-tall"><span class="highlight-hours">30</span>/400*</h3>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-id-001">
+                            <div class="card-img-top image" style="background-image: url('images/ongoing-projects/industrial_proj_bob.png');"></div>
+                        </a>
+                        <div class="card-body bg-accent-main border-radius-5-down">
+                            <div class="card-title-height">
+                                <h1 class="card-title light_text tal-center">Tjernobyl kraftværk</h1>
+                            </div>
+                            <h3 class="light_text tal-center">Industriel</h3>
+                            <div class="row margin-5 justify-content-between bg-white rounded">
+                                <div class="col-6 bg-white card-content-height border-radius-5-left">
+                                    <h2 class="tal-center card-tal">Est. pris: </h2>
+                                </div>
+                                <div class="col-1 border-div"></div>
+                                <div class="col-5 bg-white card-content-height border-radius-5-right">
+                                    <h3 class="tal-center card-tal price">1231231 DKK</h3>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row margin-5 justify-content-between bg-white rounded">
+                                <div class="col-6 bg-white card-content-height-tall border-radius-5-left">
+                                    <h2 class="tal-center card-tal fit-adj">Mandetimer brugt: </h2>
+                                </div>
+                                <div class="col-1 border-div-tall"></div>
+                                <div class="col-5 bg-white card-content-height-tall border-radius-5-right">
+                                    <h3 class="tal-center card-tal-tall"><span class="highlight-hours">390</span>/2000*</h3>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-id-002">
+                            <div class="card-img-top image" style="background-image: url('images/ongoing-projects/road_proj_bob.png');"></div>
+                        </a>
+                        <div class="card-body bg-accent-main border-radius-5-down">
+                            <div class="card-title-height">
+                                <h1 class="card-title light_text tal-center">Midt i ingenting vej</h1>
+                            </div>
+                            <h3 class="light_text tal-center">Vejarbejde</h3>
+                            <div class="row margin-5 justify-content-between bg-white rounded">
+                                <div class="col-6 bg-white card-content-height border-radius-5-left">
+                                    <h2 class="tal-center card-tal">Est. pris: </h2>
+                                </div>
+                                <div class="col-1 border-div"></div>
+                                <div class="col-5 bg-white card-content-height border-radius-5-right">
+                                    <h3 class="tal-center card-tal price">1231231 DKK</h3>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row margin-5 justify-content-between bg-white rounded">
+                                <div class="col-6 bg-white card-content-height-tall border-radius-5-left">
+                                    <h2 class="tal-center card-tal fit-adj">Mandetimer brugt: </h2>
+                                </div>
+                                <div class="col-1 border-div-tall"></div>
+                                <div class="col-5 bg-white card-content-height-tall border-radius-5-right">
+                                    <h3 class="tal-center card-tal-tall"><span class="highlight-hours">390</span>/2000*</h3>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-id-001">
+                            <div class="card-img-top image" style="background-image: url('images/ongoing-projects/industrial_proj_bob.png');"></div>
+                        </a>
+                        <div class="card-body bg-accent-main border-radius-5-down">
+                            <div class="card-title-height">
+                                <h1 class="card-title light_text tal-center">Tjernobyl kraftværk</h1>
+                            </div>
+                            <h3 class="light_text tal-center">Industriel</h3>
+                            <div class="row margin-5 justify-content-between bg-white rounded">
+                                <div class="col-6 bg-white card-content-height border-radius-5-left">
+                                    <h2 class="tal-center card-tal">Est. pris: </h2>
+                                </div>
+                                <div class="col-1 border-div"></div>
+                                <div class="col-5 bg-white card-content-height border-radius-5-right">
+                                    <h3 class="tal-center card-tal price">1231231 DKK</h3>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row margin-5 justify-content-between bg-white rounded">
+                                <div class="col-6 bg-white card-content-height-tall border-radius-5-left">
+                                    <h2 class="tal-center card-tal fit-adj">Mandetimer brugt: </h2>
+                                </div>
+                                <div class="col-1 border-div-tall"></div>
+                                <div class="col-5 bg-white card-content-height-tall border-radius-5-right">
+                                    <h3 class="tal-center card-tal-tall"><span class="highlight-hours">390</span>/2000*</h3>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-id-001">
+                            <div class="card-img-top image" style="background-image: url('images/ongoing-projects/industrial_proj_bob.png');"></div>
+                        </a>
+                        <div class="card-body bg-accent-main border-radius-5-down">
+                            <div class="card-title-height">
+                                <h1 class="card-title light_text tal-center">Tjernobyl kraftværk</h1>
+                            </div>
+                            <h3 class="light_text tal-center">Industriel</h3>
+                            <div class="row margin-5 justify-content-between bg-white rounded">
+                                <div class="col-6 bg-white card-content-height border-radius-5-left">
+                                    <h2 class="tal-center card-tal">Est. pris: </h2>
+                                </div>
+                                <div class="col-1 border-div"></div>
+                                <div class="col-5 bg-white card-content-height border-radius-5-right">
+                                    <h3 class="tal-center card-tal price">1231231 DKK</h3>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row margin-5 justify-content-between bg-white rounded">
+                                <div class="col-6 bg-white card-content-height-tall border-radius-5-left">
+                                    <h2 class="tal-center card-tal fit-adj">Mandetimer brugt: </h2>
+                                </div>
+                                <div class="col-1 border-div-tall"></div>
+                                <div class="col-5 bg-white card-content-height-tall border-radius-5-right">
+                                    <h3 class="tal-center card-tal-tall"><span class="highlight-hours">390</span>/2000*</h3>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-id-001">
+                            <div class="card-img-top image" style="background-image: url('images/ongoing-projects/industrial_proj_bob.png');"></div>
+                        </a>
+                        <div class="card-body bg-accent-main border-radius-5-down">
+                            <div class="card-title-height">
+                                <h1 class="card-title light_text tal-center">Tjernobyl kraftværk</h1>
+                            </div>
+                            <h3 class="light_text tal-center">Industriel</h3>
+                            <div class="row margin-5 justify-content-between bg-white rounded">
+                                <div class="col-6 bg-white card-content-height border-radius-5-left">
+                                    <h2 class="tal-center card-tal">Est. pris: </h2>
+                                </div>
+                                <div class="col-1 border-div"></div>
+                                <div class="col-5 bg-white card-content-height border-radius-5-right">
+                                    <h3 class="tal-center card-tal price">1231231 DKK</h3>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row margin-5 justify-content-between bg-white rounded">
+                                <div class="col-6 bg-white card-content-height-tall border-radius-5-left">
+                                    <h2 class="tal-center card-tal fit-adj">Mandetimer brugt: </h2>
+                                </div>
+                                <div class="col-1 border-div-tall"></div>
+                                <div class="col-5 bg-white card-content-height-tall border-radius-5-right">
+                                    <h3 class="tal-center card-tal-tall"><span class="highlight-hours">390</span>/2000*</h3>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modals that open up when you click the project's image - there are only 3 as we have only 3 types of dummy projects -->
+
+        <div>
+            <div class="modal fade" id="modal-id-000" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen-md-down modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h2 class="modal-title dark_text" id="exampleModalLabel">This guy's house</h2>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                      <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                      <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                      <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                      <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                      <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                      <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                      <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                      <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                      <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                      <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                      
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary bg-accent-main hide-border light_text button-fix" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div>
+            <div class="modal fade" id="modal-id-001" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen-md-down modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h2 class="modal-title dark_text" id="exampleModalLabel">Chernobyl power plant</h2>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                        <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                        <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                        <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                        <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                        <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                        <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                        <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                        <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                        <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                        <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary bg-accent-main hide-border light_text button-fix" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div>
+            <div class="modal fade" id="modal-id-002" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen-md-down modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h2 class="modal-title dark_text" id="exampleModalLabel">Middle-of-nowhere road</h2>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                        <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                        <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                        <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                        <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                        <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                        <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                        <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                        <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                        <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                        <p>Her kommer indholdet af modalen, som en beskrivelse af projektet, billeder mv.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary bg-accent-main hide-border light_text button-fix" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+        <footer class="text-white text-md-start text-sm-center">
+            <div class="container p-4 pb-0">
+    
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 pb-3">
+                            <h6 class="text-uppercase">Om os</h6>
+                            <p>
+                              Vores kerneværdier om sikkerhed, bæredygtighed og håndværk ligger til grund for hvert projekt, vi
+                              foretage. Vi er forpligtet til at bruge banebrydende teknologi og miljøvenlig praksis,
+                              sikre, at dit projekt ikke kun er bygget til at holde, men også bygget til at respektere
+                              miljø.
+                            </p>
+                        </div>
+                        <div class="col-lg-1 col-md-12"></div>
+                        <div class="col-lg-2 col-md-3 pb-3">
+                            <h6 class="text-uppercase">LINKS</h6>
+                            <p>
+                                <a href="indexDK.html">Hjem</a>
+                            </p>
+                            <p>
+                                <a href="aboutDK.html">Om</a>
+                            </p>
+                            <p>
+                                <a href="servicesDK.html">Tjenester</a>
+                            </p>
+                            <p>
+                                <a href="ongoing-projectsDK.html">Løbende projekter</a>
+                            </p>
+                            <p>
+                                <a href="project-archiveDK.html">Arkiv</a>
+                            </p>
+                        </div>
+    
+                        <div class="col-lg-3 col-md-6 pb-3">
+                            <h6 class="text-uppercase">
+                              Kontaktpersoner
+                            </h6>
+                            <p>
+                               <b> Adresse:</b> StreetMetropolis
+                            </p>
+                            <p>
+                                <b> Firma-telefon:</b> 1234-567
+                            </p>
+                            <p>
+                                <b> Kunde support: </b>9877-675
+                            </p>
+                            <p>
+                                <b> Email:</b>  <a class="text-white" href="mail:info@constructioncompany.com">info@constructioncompany.com</a>
+                            </p>
+                            <p>
+                                <b> Support: </b> <a class="text-white" href="mail:support@constructioncompany.com">support@constructioncompany.com</a>
+                            </p>
+    
+                        </div>
+    
+                        <div class="col-lg-2 col-md-3 pb-3">
+                            <h6 class="text-uppercase">Åbnet</h6>
+                            <p class="pb-2">
+                              Mandag-Fredag: <br><b>8:00 AM - 6:00 PM</b>
+                            </p>
+                            <p>
+                              Lørdag-Sunday: <br><b>Lukket</b>
+                            </p>
+                        </div>
+                    </div>
+    
+    
+                <hr class="my-3">
+    
+    
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 pt-2 pb-2 text-lg-start text-md-center text-center">
+    
+                            © 2023 <a class="text-white" href=""><b>BOBS CORPORATIONS</b></a>. All Rights Reserved.
+    
+                        </div>
+    
+                        <div class="col-lg-6 col-md-12 text-right text-center text-md-center">
+                            <!-- Facebook -->
+                            <a class="btn btn-outline-light btn-floating m-1 text-decoration-none text-hover-orange" role="button" href="https://www.facebook.com/">
+                                <i class="fab fa-facebook-f"></i> Facebook</a>
+                            
+    
+                            <!-- X -->
+                            <a class="btn btn-outline-light btn-floating m-1 text-decoration-none text-hover-orange" role="button" href="https://twitter.com/">
+                                <i class="fab fa-twitter"></i> X (Twitter)</a>
+                            
+    
+                            <!-- Google -->
+                            <a class="btn btn-outline-light btn-floating m-1 text-decoration-none text-hover-orange" role="button" href="https://google.com/">
+                                <i class="fab fa-google"></i> Google</a>
+                            
+    
+                            <!-- Instagram -->
+                            <a class="btn btn-outline-light btn-floating m-1  text-decoration-none text-hover-orange" role="button" href="https://www.instagram.com/">
+                                <i class="fab fa-instagram"></i> Instagram</a>
+                            
+                        
+                        </div>
+                    </div>
+    
+            </div>
+          </footer>
+    </body>
+</html>

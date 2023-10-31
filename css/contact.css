@@ -1,5 +1,7 @@
 @import url(primary.css);
 
+/* css fully written by Karolina Krysiak */
+
 /* Reset default styles for all elements */
 *,
 ::before,
@@ -26,15 +28,15 @@ h4 {
 	margin: 50px;
 }
 
+/* the only way to remove the weird padding that appears inside the rows */
 .row-padding > * {
 	padding-right: 0;
 	padding-left: 0;
 }
 
+/* centers stuff in the column  */
 .contact-details {
 	text-align: center;
-	display: flex;
-	flex-direction: column;
 	font-size: var(--paragraph);
 	margin-bottom: 100px;
 }
@@ -53,12 +55,14 @@ h4 {
 	margin: 20px 0 30px;
 }
 
+/* adds responsive margin */
 form,
 .contact-left,
 .address div {
 	margin: 0 10% 50px;
 }
 
+/* makes form labels and text boxes appear on the oposite sides */
 .form_box {
 	margin-bottom: 20px;
 	display: flex;
@@ -70,6 +74,7 @@ form,
 	font-weight: bold;
 }
 
+/* style for the text boxes in the form */
 .form_box input[type="text"],
 .form_box input[type="email"],
 .form_box textarea {
@@ -81,8 +86,9 @@ form,
 	margin-bottom: 20px;
 }
 
+/* makes the text box to not go wild with the size */
 .form_box textarea {
-	resize: vertical;
+	resize: none;
 }
 
 .form_box button {
@@ -103,32 +109,33 @@ form,
 	color: var(--accent-color-main);
 }
 
+/* group contact styling */
+.group {
+	padding: 0 5%;
+}
+
+.group a {
+	font-weight: bold;
+	color: var(--font-color-light);
+}
+
+/* rewritten row into flex so that the map resizes correctly */
 .address-row {
 	display: flex;
 	flex-direction: row;
 }
 
+/* collumn with map that takes half of the row space until it reaches bootstrap breakpoint */
 .map {
 	flex: 50%;
 	display: flex;
 }
 
+/* resizable map */
 .map iframe {
 	min-width: 100%;
 	min-height: 500px;
 	object-fit: cover;
-}
-
-.address {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-.address div {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 }
 
 .address p {
@@ -140,7 +147,9 @@ form,
 	font-style: italic;
 }
 
-@media only screen and (min-width: 992px) {
+/* tweaks to the mobile view */
+
+@media only screen and (max-width: 992px) {
 	.address h2 {
 		margin-top: 0;
 	}
@@ -149,6 +158,11 @@ form,
 @media only screen and (max-width: 992px) {
 	.contact-details {
 		margin-bottom: 0;
+	}
+
+	/* makes the text area resize vertically to avoid inside scroll that may be annoing on mobile devices */
+	.form_box textarea {
+		resize: vertical;
 	}
 
 	.address-row {
