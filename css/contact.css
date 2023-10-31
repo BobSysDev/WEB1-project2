@@ -37,8 +37,6 @@ h4 {
 /* centers stuff in the column  */
 .contact-details {
 	text-align: center;
-	display: flex;
-	flex-direction: column;
 	font-size: var(--paragraph);
 	margin-bottom: 100px;
 }
