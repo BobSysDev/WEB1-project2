@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+	<!-- This html file was mostly made by Karolina Krysiak except for novbar and footer -->
 	<head>
 		<title>WEB1-PROJECT2</title>
 		<meta charset="utf-8" />
@@ -9,8 +10,10 @@
 		<link href="css/header.css" rel="stylesheet" type="text/css" />
 		<link href="css/footer.css" rel="stylesheet" type="text/css" />
 		<link href="css/contact.css" rel="stylesheet" type="text/css" />
+		<!-- contact.css specifically for this html page -->
 	</head>
 	<body>
+		<!-- Navbar done by Marius Gafton -->
 		<nav class="navbar navbar-expand-md navbar-light">
 			<div class="container">
 			  <a class="navbar-brand" href="index.html"><img src="images/BOB_horizontal_light.png" alt="Your Logo" class="Logo"></a>
@@ -56,34 +59,40 @@
 			</div>
 		</nav>
 
+		<!-- A row containing basic contact information and contact form -->
 		<div class="row row-padding g-0">
+			<!-- div with conatct info -->
 			<div class="col-lg-5 col-xl-6">
+				<!-- Small braekpoint change here so that there's anough space in the form fields -->
 				<div class="contact-left">
 					<h2>Contact us</h2>
 					<p>
 						If you'd like to get in touch with us or have any questions, please don't hesitate to use the contact
 						form, send us an email, or give us a call. We're always happy to help!
 					</p>
-					<div class="contact-details">
+					<div class="d-flex flex-column contact-details">
 						<p>We are open on Monday-Friday: 8:00 AM - 6:00 PM</p>
 						<span>Company-Phone: <a href="tel:#">1234-567</a></span>
 						<span>Customer-Support: <a href="tel:#"> 9877-675</a></span>
 						<span>
 							Email:
-							<a href="mail:info@constructioncompany.com">info@constructioncompany.com</a>
+							<a href="mailto:info@constructioncompany.com">info@constructioncompany.com</a>
 						</span>
 						<span>
 							Support:
-							<a href="mail:support@constructioncompany.com">support@constructioncompany.com</a>
+							<a href="mailto:support@constructioncompany.com">support@constructioncompany.com</a>
 						</span>
 					</div>
 				</div>
 			</div>
 
+			<!-- div with conatct form -->
 			<div class="col-lg-7 col-xl-6">
 				<h4>Contact form</h4>
+
 				<form>
-					<div class="form_box contact-right">
+					<!-- Contact form will not work without php but at least it looks the part -->
+					<div class="form_box">
 						<label for="name">Name</label>
 						<input type="text" id="name" name="name" required />
 					</div>
@@ -109,8 +118,67 @@
 			</div>
 		</div>
 
+		<!--Group contact info (edited code made by Samuel Knieza)-->
+
+		<h2>Employees</h2>
+		<div class="row mt-5 mb-5 justify-content-lg-evenly group g-0">
+			<div class="col-xl-3 col-lg-6 p-1 mb-4 img-fluid d-flex justify-content-center">
+				<div class="card" style="width: 18rem">
+					<img src="images/olek-pfp.jpg" class="card-img-top" alt="Picture of employee" />
+					<div class="card-body bg-accent-main-darker text-center text-white">
+						<h5 class="card-title">Aleksander Gwóźdź</h5>
+						<span>
+							Email:
+							<a href="mailto:343331@via.dk">343331@via.dk</a>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xl-3 col-lg-6 p-1 mb-4 img-fluid d-flex justify-content-center">
+				<div class="card" style="width: 18rem">
+					<img src="images/marius.png" class="card-img-top" alt="Picture of employee" />
+					<div class="card-body bg-accent-main-darker text-center text-white">
+						<h5 class="card-title">Marius Gafton</h5>
+						<span>
+							Email:
+							<a href="mailto:344343@via.dk">344343@via.dk</a>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xl-3 col-lg-6 p-1 mb-4 img-fluid d-flex justify-content-center">
+				<div class="card" style="width: 18rem">
+					<img src="images/sampfp.jpg" class="card-img-top" alt="Picture of employee" />
+					<div class="card-body bg-accent-main-darker text-center text-white">
+						<h5 class="card-title">Samuel Knieza</h5>
+						<span>
+							Email:
+							<a href="mailto:343889@via.dk">343889@via.dk</a>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-lg-6 p-1 mb-4 img-fluid d-flex justify-content-center">
+				<div class="card" style="width: 18rem">
+					<img src="images/karolina.png" class="card-img-top" alt="Picture of employee" />
+					<div class="card-body bg-accent-main-darker text-center text-white">
+						<h5 class="card-title">Karolina Krysiak</h5>
+						<span>
+							Email:
+							<a href="mailto:342906@via.dk">342906@via.dk</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- A row containing physical address and map -->
 		<div class="row row-padding address-row g-0">
+			<!-- rewrote row into flex under address-row class so that the map resizes correctly -->
 			<div class="col-lg-6 map">
+				<!-- embeded map from google maps -->
 				<iframe
 					src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d51404.84424039082!2d9.804447966210578!3d55.858773249608014!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c6057ec156aad%3A0xf53d639a8ddcf9c6!2s8700%20Horsens!5e0!3m2!1sen!2sdk!4v1698304663795!5m2!1sen!2sdk"
 					style="border: 0"
@@ -120,13 +188,13 @@
 				></iframe>
 			</div>
 
-			<div class="col-lg-6 address">
+			<div class="col-lg-6 d-flex flex-column justify-content-center address">
 				<h2>Our location</h2>
 				<p>
 					We are also happy to meet with you in person to discuss your project. Please schedule an appointment by
 					completing the contact form, sending us an email or by calling us at 1234-567.
 				</p>
-				<div>
+				<div class="d-flex flex-column align-items-center">
 					<span>Bob's Company</span>
 					<span>Streetname 666</span>
 					<span>8700 Horsens</span>
@@ -135,108 +203,105 @@
 			</div>
 		</div>
 
+		<!-- Footer done by Marius Gafton -->
 		<!-- footer.html -->
 		<footer class="text-white text-md-start text-sm-center">
 			<div class="container p-4 pb-0">
-	
-					<div class="row">
-						<div class="col-lg-4 col-md-12 pb-3">
-							<h6 class="text-uppercase">About Us</h6>
-							<p>
-								Our core values of safety, sustainability, and craftsmanship underpin every project we
-								undertake. We are committed to utilizing cutting-edge technology and eco-friendly practices,
-								ensuring that your project is not only built to last but also built to respect the
-								environment.
-							</p>
-						</div>
-						<div class="col-lg-1 col-md-12"></div>
-						<div class="col-lg-2 col-md-3 pb-3">
-							<h6 class="text-uppercase">LINKS</h6>
-							<p>
-								<a href="index.html">Home</a>
-							</p>
-							<p>
-								<a href="about.html">About</a>
-							</p>
-							<p>
-								<a href="services.html">Services</a>
-							</p>
-							<p>
-								<a href="ongoing-projects.html">Ongoing projects</a>
-							</p>
-							<p>
-								<a href="project-archive.html">Project archive</a>
-							</p>
-						</div>
-	
-						<div class="col-lg-3 col-md-6 pb-3">
-							<h6 class="text-uppercase">
-								Contacts
-							</h6>
-							<p>
-							   <b> Address:</b> StreetMetropolis
-							</p>
-							<p>
-								<b> Company-Phone:</b> 1234-567
-							</p>
-							<p>
-								<b> Customer-Support: </b>9877-675
-							</p>
-							<p>
-								<b> Email:</b>  <a class="text-white" href="mail:info@constructioncompany.com">info@constructioncompany.com</a>
-							</p>
-							<p>
-								<b> Support: </b> <a class="text-white" href="mail:support@constructioncompany.com">support@constructioncompany.com</a>
-							</p>
-	
-						</div>
-	
-						<div class="col-lg-2 col-md-3 pb-3">
-							<h6 class="text-uppercase">Opened</h6>
-							<p class="pb-2">
-								Monday-Friday: <br><b>8:00 AM - 6:00 PM</b>
-							</p>
-							<p>
-								Saturday-Sunday: <br><b>Closed</b>
-							</p>
-						</div>
+				<div class="row">
+					<div class="col-lg-4 col-md-12 pb-3">
+						<h6 class="text-uppercase">About Us</h6>
+						<p>
+							Our core values of safety, sustainability, and craftsmanship underpin every project we undertake.
+							We are committed to utilizing cutting-edge technology and eco-friendly practices, ensuring that
+							your project is not only built to last but also built to respect the environment.
+						</p>
 					</div>
-	
-	
-				<hr class="my-3">
-	
-	
-					<div class="row">
-						<div class="col-lg-6 col-md-12 pt-2 pb-2 text-lg-start text-md-center text-center">
-	
-							© 2023 <a class="text-white" href=""><b>BOBS CORPORATIONS</b></a>. All Rights Reserved.
-	
-						</div>
-	
-						<div class="col-lg-6 col-md-12 text-right text-center text-md-center">
-							<!-- Facebook -->
-							<a class="btn btn-outline-light btn-floating m-1 text-decoration-none text-hover-orange" role="button" href="https://www.facebook.com/">
-								<i class="fab fa-facebook-f"></i> Facebook</a>
-							
-	
-							<!-- X -->
-							<a class="btn btn-outline-light btn-floating m-1 text-decoration-none text-hover-orange" role="button" href="https://twitter.com/">
-								<i class="fab fa-twitter"></i> X (Twitter)</a>
-							
-	
-							<!-- Google -->
-							<a class="btn btn-outline-light btn-floating m-1 text-decoration-none text-hover-orange" role="button" href="https://google.com/">
-								<i class="fab fa-google"></i> Google</a>
-							
-	
-							<!-- Instagram -->
-							<a class="btn btn-outline-light btn-floating m-1  text-decoration-none text-hover-orange" role="button" href="https://www.instagram.com/">
-								<i class="fab fa-instagram"></i> Instagram</a>
-							
-						
-						</div>
+					<div class="col-lg-1 col-md-12"></div>
+					<div class="col-lg-2 col-md-3 pb-3">
+						<h6 class="text-uppercase">LINKS</h6>
+						<p>
+							<a href="index.html">Home</a>
+						</p>
+						<p>
+							<a href="#">About</a>
+						</p>
+						<p>
+							<a href="#">Services</a>
+						</p>
+						<p>
+							<a href="#">Projects</a>
+						</p>
+						<p>
+							<a href="contact.html">Contact</a>
+						</p>
 					</div>
-	
+
+					<div class="col-lg-3 col-md-6 pb-3">
+						<h6 class="text-uppercase">Contacts</h6>
+						<p><b> Address:</b> StreetMetropolis</p>
+						<p><b> Company-Phone:</b> 1234-567</p>
+						<p><b> Customer-Support: </b>9877-675</p>
+						<p>
+							<b> Email:</b>
+							<a class="text-white" href="mail:info@constructioncompany.com">info@constructioncompany.com</a>
+						</p>
+						<p>
+							<b> Support: </b>
+							<a class="text-white" href="mail:support@constructioncompany.com"
+								>support@constructioncompany.com</a
+							>
+						</p>
+					</div>
+
+					<div class="col-lg-2 col-md-3 pb-3">
+						<h6 class="text-uppercase">Opened</h6>
+						<p class="pb-2">Monday-Friday: <br /><b>8:00 AM - 6:00 PM</b></p>
+						<p>Saturday-Sunday: <br /><b>Closed</b></p>
+					</div>
+				</div>
+
+				<hr class="my-3" />
+
+				<div class="row">
+					<div class="col-lg-6 col-md-12 pt-2 pb-2 text-lg-start text-md-center text-center">
+						© 2023 <a class="text-white" href=""><b>BOBS CORPORATIONS</b></a
+						>. All Rights Reserved.
+					</div>
+
+					<div class="col-lg-6 col-md-12 text-right text-center text-md-center">
+						<!-- Facebook -->
+						<a
+							class="btn btn-outline-light btn-floating m-1 text-decoration-none text-hover-orange"
+							role="button"
+						>
+							<i class="fab fa-facebook-f"></i> Facebook</a
+						>
+
+						<!-- Twitter -->
+						<a
+							class="btn btn-outline-light btn-floating m-1 text-decoration-none text-hover-orange"
+							role="button"
+						>
+							<i class="fab fa-twitter"></i> Twitter</a
+						>
+
+						<!-- Google -->
+						<a
+							class="btn btn-outline-light btn-floating m-1 text-decoration-none text-hover-orange"
+							role="button"
+						>
+							<i class="fab fa-google"></i> Google</a
+						>
+
+						<!-- Instagram -->
+						<a
+							class="btn btn-outline-light btn-floating m-1 text-decoration-none text-hover-orange"
+							role="button"
+						>
+							<i class="fab fa-instagram"></i> Instagram</a
+						>
+					</div>
+				</div>
 			</div>
 		</footer>
 

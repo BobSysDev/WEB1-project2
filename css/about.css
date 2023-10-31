@@ -1,5 +1,7 @@
 @import url(primary.css);
 
+/* css fully written by Karolina Krysiak */
+
 /* Reset default styles for all elements */
 *,
 ::before,
@@ -21,11 +23,23 @@ body {
 	overflow-x: hidden;
 }
 
+/* the only way to remove the weird padding that appears inside the rows */
 .row-padding > * {
 	padding-right: 0;
 	padding-left: 0;
 }
 
+/* rewritten row into flex so that the images resize correctly */
+.flex-top {
+	display: flex;
+	flex-direction: row;
+}
+.flex-bottom {
+	display: flex;
+	flex-direction: row;
+}
+
+/* container for the text */
 .about-box {
 	flex: 50%;
 	display: flex;
@@ -40,21 +54,13 @@ body {
 	margin-bottom: 50px;
 }
 
-.flex-top {
-	display: flex;
-	flex-direction: row;
-}
-
-.flex-bottom {
-	display: flex;
-	flex-direction: row;
-}
-
+/*container for the image */
 .about-pic {
 	flex: 50%;
 	display: flex;
 }
 
+/* resizable image that alway fits the size of the content from the oposite side of the row */
 .about-pic img {
 	min-width: 100%;
 	min-height: 500px;
@@ -62,6 +68,7 @@ body {
 }
 
 @media only screen and (max-width: 1200px) {
+	/*makes bit more space for the text so it's more readable by making the image smaller*/
 	.about-pic {
 		flex: 40%;
 	}
