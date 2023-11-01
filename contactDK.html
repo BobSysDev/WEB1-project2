@@ -6,17 +6,17 @@
 	<title>WEB1-PROJECT2</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link href="  css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="  css/primary.css" rel="stylesheet" type="text/css" />
-	<link href="  css/header.css" rel="stylesheet" type="text/css" />
-	<link href="  css/footer.css" rel="stylesheet" type="text/css" />
-	<link href="  css/contact.css" rel="stylesheet" type="text/css" />
+	<link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/primary.css" rel="stylesheet" type="text/css" />
+	<link href="css/header.css" rel="stylesheet" type="text/css" />
+	<link href="css/footer.css" rel="stylesheet" type="text/css" />
+	<link href="css/contact.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
 	<nav class="navbar navbar-expand-md navbar-light">
 		<div class="container">
-			<a class="navbar-brand" href="indexDK.html"><img src="  images/BOB_horizontal_light.png" alt="Your Logo"
+			<a class="navbar-brand" href="indexDK.html"><img src="images/BOB_horizontal_light.png" alt="Your Logo"
 					class="Logo"></a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
 				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,7 +72,7 @@
 						Hvis du gerne vil i kontakt med os eller har spørgsmål, så tøv ikke med at bruge kontakten
 						formular, send os en e-mail eller ring til os. Vi hjælper altid gerne!
 					</p>
-					<div class="contact-details">
+					<div class="d-flex flex-column contact-details">
 						<p>Vi har åbent mandag-fredag: 8:00 - 18:00</p>
 						<span>Firma-telefon: <a href="tel:#">1234-567</a></span>
 						<span>Kunde support: <a href="tel:#"> 9877-675</a></span>
@@ -179,26 +179,19 @@
 					referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
 
-			<div class="col-lg-6 address">
-				<h2>Vores placering</h2>
-				<p>
-					Hvis du gerne vil i kontakt med os eller har spørgsmål, så tøv ikke med at bruge kontakten
-					formular, send os en e-mail eller ring til os. Vi hjælper altid gerne!
-				</p>
-				<div class="contact-details">
-					<p>Vi har åbent mandag-fredag: 8:00 - 18:00</p>
-					<span>Firma-telefon: <a href="tel:#">1234-567</a></span>
-					<span>Kunde support: <a href="tel:#"> 9877-675</a></span>
-					<span>
-						Email:
-						<a href="mailto:info@constructioncompany.com">info@constructioncompany.com</a>
-					</span>
-					<span>
-						Support:
-						<a href="mailto:support@constructioncompany.com">support@constructioncompany.com</a>
-					</span>
-				</div>
-			</div>
+			<div class="col-lg-6 d-flex flex-column justify-content-center address">
+                <h2>Vores placering</h2>
+                <p>
+                    Hvis du gerne vil i kontakt med os eller har spørgsmål, så tøv ikke med at bruge kontakten
+                    formular, send os en e-mail eller ring til os. Vi hjælper altid gerne!
+                </p>
+                <div class="d-flex flex-column align-items-center">
+                    <span>Bob's Company</span>
+                    <span>Streetname 666</span>
+                    <span>8700 Horsens</span>
+                    <span>Danmark</span>
+                </div>
+            </div>
 		</div>
 
 	<!-- footer.html -->

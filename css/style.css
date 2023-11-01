@@ -94,3 +94,9 @@
     border: 1px solid #f8bc24;
 
 }
+
+@media (max-width: 420px) {
+    .services-btn {
+        font-size: 20px;
+    }
+}
