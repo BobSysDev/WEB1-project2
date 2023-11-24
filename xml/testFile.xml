@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <allProjects>
-    <project type="residential">
+    <project type="Roadwork">
         <projectId>1</projectId>
         <title>Test Project</title>
         <budgetEstimate>5</budgetEstimate>
@@ -45,7 +45,7 @@
         </residential>
         <imagePath></imagePath>
     </project>
-    <project type="residential">
+    <project type="Residential">
         <projectId>2</projectId>
         <title>Random guy's house 2</title>
         <budgetEstimate>1234</budgetEstimate>
@@ -55,6 +55,51 @@
         <manHoursEstimate>223</manHoursEstimate>
         <manHours>1</manHours>
         <isArchived>false</isArchived>
+        <myDate>
+            <year>2015</year>
+            <month>12</month>
+            <day>24</day>
+        </myDate>
+        <customer>
+            <isPrivate>true</isPrivate>
+            <name>
+                <firstName>John</firstName>
+                <middleName>Quincy</middleName>
+                <lastName>Doe</lastName>
+            </name>
+            <email>
+                <username>johndoe</username>
+                <host>example</host>
+                <domain>com</domain>
+            </email>
+            <phone>
+                <phoneNumber>1234567890</phoneNumber>
+                <countryCode>1</countryCode>
+            </phone>
+            <customerCompany>
+                <name>Acme</name>
+                <CVR>12345678</CVR>
+            </customerCompany>
+        </customer>
+        <residential>
+            <size>10.3</size>
+            <numberOfKitchens>1</numberOfKitchens>
+            <numberOfBathrooms>2</numberOfBathrooms>
+            <otherRoomsWithPlumbing>3</otherRoomsWithPlumbing>
+            <isNewBuilding>true</isNewBuilding>
+        </residential>
+        <imagePath>images/project2137.png</imagePath>
+    </project>
+    <project type="Commercial">
+        <projectId>2</projectId>
+        <title>Random guy's house 2</title>
+        <budgetEstimate>1234</budgetEstimate>
+        <budget>200000</budget>
+        <timeEstimate>12</timeEstimate>
+        <timeInterval>13</timeInterval>
+        <manHoursEstimate>223</manHoursEstimate>
+        <manHours>1</manHours>
+        <isArchived>true</isArchived>
         <myDate>
             <year>2015</year>
             <month>12</month>

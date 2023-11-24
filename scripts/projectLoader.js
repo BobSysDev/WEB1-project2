@@ -1,16 +1,32 @@
 var cardHolder = $("#cardHolder");
 
+
 $.get("xml/testFile.xml", function (xml, status) {
     console.log("Status for request to xml/testFile.xml: " + status);
     
     cardHolderData = cardHolder.html();
 
+    if(cardHolder.hasClass("load-ongoing-projects") == true){
+        var loadOngoingFiles = "true";
+    }
+    else{
+        var loadOngoingFiles = "false";
+    }
+
+    console.log(loadOngoingFiles);
+
     $(xml).find("project").each(function () {
         var projectType = $(this).attr("type");
         
-        if(projectType != "residential" && projectType != "commercial" && projectType != "industrial" && projectType != "road"){
+        if(projectType != "Residential" && projectType != "Commercial" && projectType != "Industrial" && projectType != "Roadwork"){
             alert("Your XML file contains unrecognized projects, check the file and try again.");
             return;
+        }
+
+        var isArchived = $(this).find("isArchived").text();
+
+        if(isArchived == loadOngoingFiles){
+            return
         }
 
         projectId = $(this).find("projectId").text();
