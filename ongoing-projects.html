@@ -113,7 +113,10 @@
 
             <!-- The divs holding cards ongoing projects -->
             <!-- The cards have inline styling with the background image so that it can be added in HTML instead of CSS - now I don't need like 6 classes for 6 cards, just one -->
-            <div class="row left-right-margin">
+            <div class="row left-right-margin" id="cardHolder">
+                
+                <!-- CARD START -->
+                
                 <div class="col-lg-4 col-md-6">
                     <a href="#" data-bs-toggle="modal" data-bs-target="#modal-id-000">
                     <div class="card">
@@ -146,6 +149,9 @@
                       </div>
                     </a>
                 </div>
+
+                <!-- CARD END -->
+
                 <div class="col-lg-4 col-md-6">
                     <a href="#" data-bs-toggle="modal" data-bs-target="#modal-id-001">
                     <div class="card">
@@ -502,5 +508,8 @@
     
             </div>
         </footer>
+
+        <script src="scripts/jquery-3.7.1.min.js"></script>
+        <script src="scripts/projectLoader.js"></script>
     </body>
 </html>
