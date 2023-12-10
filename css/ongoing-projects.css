@@ -206,7 +206,7 @@ h3.card-tal-tall{
     }
 }
 
-@media screen and (max-width: 361.98px){
+@media screen and (max-width: 345.98px){
     .fit-adj{
         line-height: 30px;
     }
@@ -364,3 +364,11 @@ h3.card-tal-tall{
             height: 240px;
         }
     }
+
+
+/* Styles for the modals that display project details */
+
+.projectTypeInAModal{
+    font-size: 24px;
+    font-weight: 400;
+}
