@@ -1,6 +1,8 @@
 var cardHolder = $("#cardHolder");
 var modalHolder = $("#modalHolder");
 
+var displayArchiveOnly = cardHolder.hasClass("archive");
+
 var projectArray = [];
 
 $(document).ready(function() {
@@ -17,15 +19,6 @@ $.get("xml/projectDB.xml", function (xml, status) {
     console.log("Status for request to xml/projectDB.xml: " + status);
     
     cardHolderData = cardHolder.html();
-
-    if(cardHolder.hasClass("load-ongoing-projects") == true){
-        var loadOngoingFiles = "true";
-    }
-    else{
-        var loadOngoingFiles = "false";
-    }
-
-    console.log(loadOngoingFiles);
 
     $(xml).find("project").each(function () {
         var projectType = $(this).attr("type");
@@ -46,7 +39,9 @@ $.get("xml/projectDB.xml", function (xml, status) {
     });
 
     renderAllProjects();
-    renderAllModals();
+    if(!displayArchiveOnly){
+        renderAllModals();
+    }
 });
 
 $("#sortProjects").on('change', function() {
@@ -80,6 +75,24 @@ function printProjectCard(project){
     cardHolderData += "<h2 class=\"tal-center card-tal fit-adj\">Est. man-hours: </h2></div><div class=\"col-1 border-div-tall\"></div><div class=\"col-5 bg-white card-content-height-tall border-radius-5-right\">";
     cardHolderData += "<h3 class=\"tal-center card-tal-tall\">" + Math.round(project.manHoursEstimate) + "</h3>"
     cardHolderData += "</div></div></div></div></a></div>";
+
+    cardHolder.html(cardHolderData);
+}
+
+function printArchivedProjectCard(project){
+    cardHolderData = cardHolder.html();
+
+    if(project.imagePath == ""){
+        project.imagePath = "images/ongoing-projects/house_proj_bob.png";
+    }
+
+    cardHolderData += "<div class=\"col-lg-4 col-md-6\"><div class=\"card\">";
+    cardHolderData += "<img src=\"" + project.imagePath + "\" class=\"card-img-top\" alt=\"...\">";
+    cardHolderData += "<div class=\"card-body bg-accent-main border-radius-5-down\"><div class=\"card-title-height\">";
+    cardHolderData += "<h1 class=\"card-title light_text tal-center\">" + project.title + "</h1></div>";
+    cardHolderData += "<h3 class=\"light_text tal-center\">" + project.type + "</h3>";
+    cardHolderData += "<div class=\"row margin-5 justify-content-between bg-white rounded project-archive-text-div\">";
+    cardHolderData += "<p>" + project.details + "</p></div></div></div></div>"
 
     cardHolder.html(cardHolderData);
 }
@@ -126,7 +139,12 @@ function renderAllProjects(sortOrder = "4", projectType = "Any", filterString = 
     }
 
     arrayToDisplay.forEach(project => {
-        printProjectCard(project);
+        if(project.isArchived == "false" && displayArchiveOnly == false){
+            printProjectCard(project);
+        }
+        else if(project.isArchived == "true" && displayArchiveOnly == true){
+            printArchivedProjectCard(project);
+        }
     });
 }
 
