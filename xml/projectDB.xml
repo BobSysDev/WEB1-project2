@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<allProjects>
+  <project type="Residential">
+    <projectId>1</projectId>
+    <title>jebnuty dom</title>
+    <budgetEstimate>50230.0</budgetEstimate>
+    <budget>42320.25</budget>
+    <timeEstimate>237</timeEstimate>
+    <timeInterval>5</timeInterval>
+    <manHoursEstimate>50230.0</manHoursEstimate>
+    <manHours>52340.0</manHours>
+    <details>Here's where I'd put my details... IF I HAD ANY</details>
+    <materials>rock and stoneasdas</materials>
+    <isArchived>true</isArchived>
+    <startDate>01.02.2060</startDate>
+    <customer>
+      <isPrivate>true</isPrivate>
+      <name>
+        <firstName>kokotko</firstName>
+        <middleName></middleName>
+        <lastName>Doeasdasd</lastName>
+      </name>
+      <email>
+        <username>johndoeasda</username>
+        <host>gmailaswd</host>
+        <domain>comasd</domain>
+      </email>
+      <phone>
+        <countryCode>45234</countryCode>
+        <number>12345678234</number>
+      </phone>
+    </customer>
+    <residential>
+      <size>12234.0</size>
+      <numberOfKitchens>123</numberOfKitchens>
+      <numberOfBathrooms>223</numberOfBathrooms>
+      <numberOfOtherRoomsWithPlumbing>123</numberOfOtherRoomsWithPlumbing>
+      <isNewBuilding>true</isNewBuilding>
+    </residential>
+  </project>
+  <project type="Commercial">
+    <projectId>2</projectId>
+    <title>Ikea Horsens</title>
+    <budgetEstimate>5.0</budgetEstimate>
+    <budget>123456.0</budget>
+    <timeEstimate>9</timeEstimate>
+    <timeInterval>12</timeInterval>
+    <manHoursEstimate>800.0</manHoursEstimate>
+    <manHours>5200.0</manHours>
+    <isArchived>false</isArchived>
+    <details>none</details>
+    <materials>mostly concreteasdasd</materials>
+    <startDate>03.02.2021</startDate>
+    <customer>
+      <isPrivate>true</isPrivate>
+      <name>
+        <firstName>kokotko</firstName>
+        <middleName></middleName>
+        <lastName>Doeasdasd</lastName>
+      </name>
+      <email>
+        <username>johndoeasda</username>
+        <host>gmailaswd</host>
+        <domain>comasd</domain>
+      </email>
+      <phone>
+        <countryCode>45234</countryCode>
+        <number>12345678234</number>
+      </phone>
+    </customer>
+    <commercial>
+      <size>69420.0</size>
+      <numberOfFloors>2</numberOfFloors>
+      <type>Commercial</type>
+    </commercial>
+  </project>
+  <project type="Roadwork">
+    <projectId>4</projectId>
+    <title>Autobahn A1</title>
+    <budgetEstimate>3000000.0</budgetEstimate>
+    <budget>3000000.0</budget>
+    <timeEstimate>18</timeEstimate>
+    <timeInterval>18</timeInterval>
+    <manHoursEstimate>234556.0</manHoursEstimate>
+    <manHours>234556.0</manHours>
+    <details>From Horsens to Budapest</details>
+    <materials>Concrete, Asphalt</materials>
+    <isArchived>false</isArchived>
+    <startDate>28.12.2028</startDate>
+    <customer>
+      <isPrivate>false</isPrivate>
+      <name>
+        <firstName>Samo</firstName>
+        <middleName></middleName>
+        <lastName>Knieza</lastName>
+      </name>
+      <email>
+        <username>kvecko</username>
+        <host>gmail</host>
+        <domain>com</domain>
+      </email>
+      <phone>
+        <countryCode>45</countryCode>
+        <number>60901230</number>
+      </phone>
+      <customerCompany>
+        <name>qtek</name>
+        <CVR>42069</CVR>
+      </customerCompany>
+    </customer>
+    <roadwork>
+      <length>500000.0</length>
+      <width>4.0</width>
+      <numberOfBridges>0</numberOfBridges>
+      <obstacles>Berlin</obstacles>
+    </roadwork>
+  </project>
+  <project type="Industrial">
+    <projectId>6</projectId>
+    <title>Chernobyl Power Plant</title>
+    <budgetEstimate>6000000.0</budgetEstimate>
+    <budget>6000000.0</budget>
+    <timeEstimate>30</timeEstimate>
+    <timeInterval>30</timeInterval>
+    <manHoursEstimate>69420.0</manHoursEstimate>
+    <manHours>69420.0</manHours>
+    <details>It won't blow up this time I swear</details>
+    <materials>Bricks, Concrete, Wood, Steel</materials>
+    <isArchived>false</isArchived>
+    <startDate>13.12.2023</startDate>
+    <customer>
+      <isPrivate>false</isPrivate>
+      <name>
+        <firstName>Mike</firstName>
+        <middleName>Dunno</middleName>
+        <lastName>Wazosky</lastName>
+      </name>
+      <email>
+        <username>mike</username>
+        <host>chernobyl</host>
+        <domain>gov</domain>
+      </email>
+      <phone>
+        <countryCode>45</countryCode>
+        <number>12345678</number>
+      </phone>
+      <customerCompany>
+        <name>MakeChernobylGreatAgain Inc.</name>
+        <CVR>123456789</CVR>
+      </customerCompany>
+    </customer>
+    <industrial>
+      <size>1.23456789E8</size>
+      <type>Industrial</type>
+    </industrial>
+  </project>
+</allProjects>

@@ -80,30 +80,32 @@
                     <div class="col-lg-4 col-md-12">
                         <div class="input-group form-floating">
                             <div class="form-floating">
-                                <input type="text" class="form-control hide-border" id="email" placeholder="Enter email" name="email">
-                                <label for="email">Project name</label>
+                                <input type="text" class="form-control hide-border" id="projectSearch" placeholder="Enter email" name="projectSearch">
+                                <label for="projectSearch">Project name</label>
                             </div>
-                            <button class="btn btn-outline-secondary bg-accent-main hide-border light_text button-fix" type="button" id="button-addon2">Search</button>
+                            <button class="btn btn-outline-secondary bg-accent-main hide-border light_text button-fix" type="button" id="projectSearchButton">Search</button>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="form-floating add-top-margin">
-                            <select class="form-select" aria-label="project-type" id="projectType">
-                                <option selected>Residential</option>
-                                <option value="1">Comercial</option>
-                                <option value="2">Industrial</option>
-                                <option value="3">Roadwork</option>
+                            <select class="form-select" aria-label="project-type" id="filterProjects">
+                                <option value="Any" selected>Any</option>
+                                <option value="Residential">Residential</option>
+                                <option value="Commercial">Commercial</option>
+                                <option value="Industrial">Industrial</option>
+                                <option value="Roadwork">Roadwork</option>
                             </select>
                             <label for="projectType">Select project type</label>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="form-floating add-top-margin">
-                            <select class="form-select" aria-label="project-type" id="projectType">
-                                <option selected>Alphabetically</option>
+                            <select class="form-select" aria-label="project-type" id="sortProjects">
+                                <option value="0">Alphabetically</option>
                                 <option value="1">Est. price (low to high)</option>
                                 <option value="2">Est. price (high to low)</option>
                                 <option value="3">Date of creation</option>
+                                <option value="4" selected>Order of creation</option>
                             </select>
                             <label for="projectType">Sort by</label>
                         </div>
@@ -113,7 +115,10 @@
 
             <!-- The divs holding cards ongoing projects -->
             <!-- The cards have inline styling with the background image so that it can be added in HTML instead of CSS - now I don't need like 6 classes for 6 cards, just one -->
-            <div class="row left-right-margin">
+            <div class="row left-right-margin load-ongoing-projects" id="cardHolder">
+                
+                <!-- DEMO CARD START -->
+                
                 <div class="col-lg-4 col-md-6">
                     <a href="#" data-bs-toggle="modal" data-bs-target="#modal-id-000">
                     <div class="card">
@@ -135,177 +140,20 @@
                             <br>
                             <div class="row margin-5 justify-content-between bg-white rounded">
                                 <div class="col-6 bg-white card-content-height-tall border-radius-5-left">
-                                    <h2 class="tal-center card-tal fit-adj">Man-hours used: </h2>
+                                    <h2 class="tal-center card-tal fit-adj">Est. man-hours: </h2>
                                 </div>
                                 <div class="col-1 border-div-tall"></div>
                                 <div class="col-5 bg-white card-content-height-tall border-radius-5-right">
-                                    <h3 class="tal-center card-tal-tall"><span class="highlight-hours">30</span>/400*</h3>
+                                    <h3 class="tal-center card-tal-tall">400</h3>
                                 </div>
                             </div>
                         </div>
                       </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal-id-001">
-                    <div class="card">
-                            <div class="card-img-top image" style="background-image: url('images/ongoing-projects/industrial_proj_bob.png');"></div>
-                            <div class="card-body bg-accent-main border-radius-5-down">
-                                <div class="card-title-height">
-                                    <h1 class="card-title light_text tal-center">Chernobyl power plant</h1>
-                                </div>
-                                <h3 class="light_text tal-center">Industrial</h3>
-                                <div class="row margin-5 justify-content-between bg-white rounded">
-                                    <div class="col-6 bg-white card-content-height border-radius-5-left">
-                                        <h2 class="tal-center card-tal">Est. price: </h2>
-                                    </div>
-                                    <div class="col-1 border-div"></div>
-                                    <div class="col-5 bg-white card-content-height border-radius-5-right">
-                                        <h3 class="tal-center card-tal price">1231231 DKK</h3>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row margin-5 justify-content-between bg-white rounded">
-                                    <div class="col-6 bg-white card-content-height-tall border-radius-5-left">
-                                        <h2 class="tal-center card-tal fit-adj">Man-hours used: </h2>
-                                    </div>
-                                    <div class="col-1 border-div-tall"></div>
-                                    <div class="col-5 bg-white card-content-height-tall border-radius-5-right">
-                                        <h3 class="tal-center card-tal-tall"><span class="highlight-hours">390</span>/2000*</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    </div>
-                <div class="col-lg-4 col-md-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal-id-002">
-                    <div class="card">
-                            <div class="card-img-top image" style="background-image: url('images/ongoing-projects/road_proj_bob.png');"></div>
-                            <div class="card-body bg-accent-main border-radius-5-down">
-                                <div class="card-title-height">
-                                    <h1 class="card-title light_text tal-center">Middle-of-nowhere road</h1>
-                                </div>
-                                <h3 class="light_text tal-center">Roadwork</h3>
-                                <div class="row margin-5 justify-content-between bg-white rounded">
-                                    <div class="col-6 bg-white card-content-height border-radius-5-left">
-                                        <h2 class="tal-center card-tal">Est. price: </h2>
-                                    </div>
-                                    <div class="col-1 border-div"></div>
-                                    <div class="col-5 bg-white card-content-height border-radius-5-right">
-                                        <h3 class="tal-center card-tal price">1231231 DKK</h3>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row margin-5 justify-content-between bg-white rounded">
-                                    <div class="col-6 bg-white card-content-height-tall border-radius-5-left">
-                                        <h2 class="tal-center card-tal fit-adj">Man-hours used: </h2>
-                                    </div>
-                                    <div class="col-1 border-div-tall"></div>
-                                    <div class="col-5 bg-white card-content-height-tall border-radius-5-right">
-                                        <h3 class="tal-center card-tal-tall"><span class="highlight-hours">390</span>/2000*</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal-id-001">
-                    <div class="card">
-                            <div class="card-img-top image" style="background-image: url('images/ongoing-projects/industrial_proj_bob.png');"></div>
-                            <div class="card-body bg-accent-main border-radius-5-down">
-                                <div class="card-title-height">
-                                    <h1 class="card-title light_text tal-center">Chernobyl power plant</h1>
-                                </div>
-                                <h3 class="light_text tal-center">Industrial</h3>
-                                <div class="row margin-5 justify-content-between bg-white rounded">
-                                    <div class="col-6 bg-white card-content-height border-radius-5-left">
-                                        <h2 class="tal-center card-tal">Est. price: </h2>
-                                    </div>
-                                    <div class="col-1 border-div"></div>
-                                    <div class="col-5 bg-white card-content-height border-radius-5-right">
-                                        <h3 class="tal-center card-tal price">1231231 DKK</h3>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row margin-5 justify-content-between bg-white rounded">
-                                    <div class="col-6 bg-white card-content-height-tall border-radius-5-left">
-                                        <h2 class="tal-center card-tal fit-adj">Man-hours used: </h2>
-                                    </div>
-                                    <div class="col-1 border-div-tall"></div>
-                                    <div class="col-5 bg-white card-content-height-tall border-radius-5-right">
-                                        <h3 class="tal-center card-tal-tall"><span class="highlight-hours">390</span>/2000*</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal-id-001">
-                    <div class="card">
-                            <div class="card-img-top image" style="background-image: url('images/ongoing-projects/industrial_proj_bob.png');"></div>
-                            <div class="card-body bg-accent-main border-radius-5-down">
-                                <div class="card-title-height">
-                                    <h1 class="card-title light_text tal-center">Chernobyl power plant</h1>
-                                </div>
-                                <h3 class="light_text tal-center">Industrial</h3>
-                                <div class="row margin-5 justify-content-between bg-white rounded">
-                                    <div class="col-6 bg-white card-content-height border-radius-5-left">
-                                        <h2 class="tal-center card-tal">Est. price: </h2>
-                                    </div>
-                                    <div class="col-1 border-div"></div>
-                                    <div class="col-5 bg-white card-content-height border-radius-5-right">
-                                        <h3 class="tal-center card-tal price">1231231 DKK</h3>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row margin-5 justify-content-between bg-white rounded">
-                                <div class="col-6 bg-white card-content-height-tall border-radius-5-left">
-                                    <h2 class="tal-center card-tal fit-adj">Man-hours used: </h2>
-                                </div>
-                                <div class="col-1 border-div-tall"></div>
-                                <div class="col-5 bg-white card-content-height-tall border-radius-5-right">
-                                    <h3 class="tal-center card-tal-tall"><span class="highlight-hours">390</span>/2000*</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal-id-001">
-                    <div class="card">
-                            <div class="card-img-top image" style="background-image: url('images/ongoing-projects/industrial_proj_bob.png');"></div>
-                            <div class="card-body bg-accent-main border-radius-5-down">
-                                <div class="card-title-height">
-                                    <h1 class="card-title light_text tal-center">Chernobyl power plant</h1>
-                                </div>
-                                <h3 class="light_text tal-center">Industrial</h3>
-                                <div class="row margin-5 justify-content-between bg-white rounded">
-                                    <div class="col-6 bg-white card-content-height border-radius-5-left">
-                                        <h2 class="tal-center card-tal">Est. price: </h2>
-                                    </div>
-                                    <div class="col-1 border-div"></div>
-                                    <div class="col-5 bg-white card-content-height border-radius-5-right">
-                                        <h3 class="tal-center card-tal price">1231231 DKK</h3>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row margin-5 justify-content-between bg-white rounded">
-                                    <div class="col-6 bg-white card-content-height-tall border-radius-5-left">
-                                        <h2 class="tal-center card-tal fit-adj">Man-hours used: </h2>
-                                    </div>
-                                    <div class="col-1 border-div-tall"></div>
-                                    <div class="col-5 bg-white card-content-height-tall border-radius-5-right">
-                                        <h3 class="tal-center card-tal-tall"><span class="highlight-hours">390</span>/2000*</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+
+                <!-- DEMO CARD END -->
+
             </div>
         </div>
 
@@ -340,63 +188,52 @@
                 </div>
               </div>
         </div>
-        <div>
-            <div class="modal fade" id="modal-id-001" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+        <div id="modalHolder", class="ongoing">
+            <!-- DEMO MODAL START -->
+
+            <div class="modal fade" id="modal-id-1" tabindex="-1" aria-labelledby="label-modal-1" aria-hidden="true">
                 <div class="modal-dialog modal-fullscreen-md-down modal-xl">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h2 class="modal-title dark_text" id="exampleModalLabel">Chernobyl power plant</h2>
+                      <h1 class="modal-title dark_text" id="label-modal-1">This guy's house<br><span><h3>Residential | Started on 01.01.2023</h3></span></h1>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
-                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
-                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
-                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
-                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
-                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
-                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
-                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
-                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
-                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
-                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
-                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
+                      <div class="row">
+                        <div class="col-lg-6 col-md-12">
+                          <h2 class="dark_text">Materials used</h2>
+                          <p class="dark_text">Wood, concrete, some other shit</p>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                          <h2 class="dark_text">Project details</h2>
+                          <p class="dark_text">This house was a real pain in the ass to build tbh, but we managed anyway</p>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="row">
+                        <div class="col-lg-4 col-md-12">
+                          <h2 class="dark_text">Est. budget</h2>
+                          <p class="dark_text">2137 DKK</p>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                          <h2 class="dark_text">Est. man-hours</h2>
+                          <p class="dark_text">420h</p>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                          <h2 class="dark_text">Est. timeframe</h2>
+                          <p class="dark_text">4 months</p>
+                        </div>
+                      </div>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary bg-accent-main hide-border light_text button-fix" data-bs-dismiss="modal">Close</button>
                     </div>
                   </div>
                 </div>
-              </div>
-        </div>
-        <div>
-            <div class="modal fade" id="modal-id-002" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-fullscreen-md-down modal-xl">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h2 class="modal-title dark_text" id="exampleModalLabel">Middle-of-nowhere road</h2>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
-                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
-                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
-                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
-                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
-                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
-                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
-                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
-                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
-                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
-                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
-                      <p>Here goes the content of the modal, like a description of the project, pictures, etc.</p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary bg-accent-main hide-border light_text button-fix" data-bs-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            </div>
+
+            <!-- DEMO MODAL END -->
         </div>
 
         <footer class="text-white text-md-start text-sm-center">
@@ -502,5 +339,8 @@
     
             </div>
         </footer>
+
+        <script src="scripts/jquery-3.7.1.min.js"></script>
+        <script src="scripts/projectLoader.js"></script>
     </body>
 </html>

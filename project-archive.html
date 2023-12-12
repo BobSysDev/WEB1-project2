@@ -80,30 +80,32 @@
                     <div class="col-lg-4 col-md-12">
                         <div class="input-group form-floating">
                             <div class="form-floating">
-                                <input type="text" class="form-control hide-border" id="email" placeholder="Enter email" name="email">
-                                <label for="email">Project name</label>
+                                <input type="text" class="form-control hide-border" id="projectSearch" placeholder="Enter email" name="projectSearch">
+                                <label for="projectSearch">Project name</label>
                             </div>
-                            <button class="btn btn-outline-secondary bg-accent-main hide-border light_text button-fix" type="button" id="button-addon2">Search</button>
+                            <button class="btn btn-outline-secondary bg-accent-main hide-border light_text button-fix" type="button" id="projectSearchButton">Search</button>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="form-floating add-top-margin">
-                            <select class="form-select" aria-label="project-type" id="projectType">
-                                <option selected>Residential</option>
-                                <option value="1">Comercial</option>
-                                <option value="2">Industrial</option>
-                                <option value="3">Roadwork</option>
+                            <select class="form-select" aria-label="project-type" id="filterProjects">
+                                <option value="Any" selected>Any</option>
+                                <option value="Residential">Residential</option>
+                                <option value="Commercial">Commercial</option>
+                                <option value="Industrial">Industrial</option>
+                                <option value="Roadwork">Roadwork</option>
                             </select>
                             <label for="projectType">Select project type</label>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="form-floating add-top-margin">
-                            <select class="form-select" aria-label="project-type" id="projectType">
-                                <option selected>Alphabetically</option>
+                            <select class="form-select" aria-label="project-type" id="sortProjects">
+                                <option value="0">Alphabetically</option>
                                 <option value="1">Est. price (low to high)</option>
                                 <option value="2">Est. price (high to low)</option>
                                 <option value="3">Date of creation</option>
+                                <option value="4" selected>Order of creation</option>
                             </select>
                             <label for="projectType">Sort by</label>
                         </div>
@@ -112,7 +114,9 @@
             </form>
 
             <!-- The divs holding cards past projects -->
-            <div class="row left-right-margin">
+            <div class="row left-right-margin archive" id="cardHolder">
+                <!-- DEMO CARD START -->
+
                 <div class="col-lg-4 col-md-6">
                     <div class="card">
                         <img src="images/ongoing-projects/house_proj_bob.png" class="card-img-top" alt="...">
@@ -127,34 +131,8 @@
                         </div>
                       </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <img src="images/ongoing-projects/industrial_proj_bob.png" class="card-img-top" alt="...">
-                        <div class="card-body bg-accent-main border-radius-5-down">
-                            <div class="card-title-height">
-                                <h1 class="card-title light_text tal-center">Yoghurt factory</h1>
-                            </div>
-                            <h3 class="light_text tal-center">Industrial</h3>
-                            <div class="row margin-5 justify-content-between bg-white rounded project-archive-text-div">
-                                <p>We are proud to have completed the Yoghurt Factory, a complex project that is now producing delicious yoghurt for the local community.</p>
-                            </div>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card">
-                        <img src="images/ongoing-projects/road_proj_bob.png" class="card-img-top" alt="...">
-                        <div class="card-body bg-accent-main border-radius-5-down">
-                            <div class="card-title-height">
-                                <h1 class="card-title light_text tal-center">A random road</h1>
-                            </div>
-                            <h3 class="light_text tal-center">Roadwork</h3>
-                            <div class="row margin-5 justify-content-between bg-white rounded project-archive-text-div">
-                                <p>We are proud to have completed A Random Road, a challenging project that is now providing a safe and convenient route for motorists and pedestrians.</p>
-                            </div>
-                        </div>
-                      </div>
-                </div>
+
+                <!-- DEMO CARD END -->
             </div>
         </div>
 
@@ -261,5 +239,8 @@
     
             </div>
         </footer>
+
+        <script src="scripts/jquery-3.7.1.min.js"></script>
+        <script src="scripts/projectLoader.js"></script>
     </body>
 </html>
