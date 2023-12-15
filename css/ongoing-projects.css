@@ -217,7 +217,7 @@ h3.card-tal-tall{
 .image {
     height: 150px;
     width: 100%;
-    background-size: auto 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     border-radius: 5px, 5px, 0, 0;
     background-position: center;
@@ -347,6 +347,11 @@ h3.card-tal-tall{
     line-height: 24px;
   }
 
+  img.card-img-top{
+    max-height: 150px;
+    object-fit: cover;
+  }
+
   @media screen and (max-width: 1399.98px) {
     .project-archive-text-div{
         height: 300px;
@@ -371,4 +376,16 @@ h3.card-tal-tall{
 .projectTypeInAModal{
     font-size: 24px;
     font-weight: 400;
+}
+
+.v-spacer-200{
+    height: 200px;
+}
+
+.v-spacer-350{
+    height: 350px;
+}
+
+.v-spacer-800{
+    height: 800px;
 }

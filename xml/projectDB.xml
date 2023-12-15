@@ -2,155 +2,244 @@
 <allProjects>
   <project type="Residential">
     <projectId>1</projectId>
-    <title>jebnuty dom</title>
-    <budgetEstimate>50230.0</budgetEstimate>
-    <budget>42320.25</budget>
-    <timeEstimate>237</timeEstimate>
-    <timeInterval>5</timeInterval>
-    <manHoursEstimate>50230.0</manHoursEstimate>
-    <manHours>52340.0</manHours>
-    <details>Here's where I'd put my details... IF I HAD ANY</details>
-    <materials>rock and stoneasdas</materials>
+    <title>A cozy house</title>
+    <budgetEstimate>300000.0</budgetEstimate>
+    <budget>300000.0</budget>
+    <timeEstimate>9</timeEstimate>
+    <timeInterval>9</timeInterval>
+    <manHoursEstimate>678.0</manHoursEstimate>
+    <manHours>678.0</manHours>
+    <details>The owners requested a house, we're going to build it. Can we do it? Yes, we can!</details>
+    <materials>Bricks, Concrete, Wood</materials>
     <isArchived>true</isArchived>
-    <startDate>01.02.2060</startDate>
+    <startDate>15.11.2023</startDate>
+    <coverImage>images/residential01.png</coverImage>
     <customer>
       <isPrivate>true</isPrivate>
       <name>
-        <firstName>kokotko</firstName>
+        <firstName>John</firstName>
         <middleName></middleName>
-        <lastName>Doeasdasd</lastName>
+        <lastName>TheSecond</lastName>
       </name>
       <email>
-        <username>johndoeasda</username>
-        <host>gmailaswd</host>
-        <domain>comasd</domain>
+        <username>jp2</username>
+        <host>vatican</host>
+        <domain>gov</domain>
       </email>
       <phone>
-        <countryCode>45234</countryCode>
-        <number>12345678234</number>
+        <countryCode>48</countryCode>
+        <number>213760420</number>
       </phone>
     </customer>
     <residential>
-      <size>12234.0</size>
-      <numberOfKitchens>123</numberOfKitchens>
-      <numberOfBathrooms>223</numberOfBathrooms>
-      <numberOfOtherRoomsWithPlumbing>123</numberOfOtherRoomsWithPlumbing>
+      <size>140.0</size>
+      <numberOfKitchens>1</numberOfKitchens>
+      <numberOfBathrooms>2</numberOfBathrooms>
+      <numberOfOtherRoomsWithPlumbing>0</numberOfOtherRoomsWithPlumbing>
       <isNewBuilding>true</isNewBuilding>
     </residential>
   </project>
   <project type="Commercial">
     <projectId>2</projectId>
-    <title>Ikea Horsens</title>
-    <budgetEstimate>5.0</budgetEstimate>
-    <budget>123456.0</budget>
-    <timeEstimate>9</timeEstimate>
-    <timeInterval>12</timeInterval>
-    <manHoursEstimate>800.0</manHoursEstimate>
-    <manHours>5200.0</manHours>
-    <isArchived>false</isArchived>
-    <details>none</details>
-    <materials>mostly concreteasdasd</materials>
-    <startDate>03.02.2021</startDate>
-    <customer>
-      <isPrivate>true</isPrivate>
-      <name>
-        <firstName>kokotko</firstName>
-        <middleName></middleName>
-        <lastName>Doeasdasd</lastName>
-      </name>
-      <email>
-        <username>johndoeasda</username>
-        <host>gmailaswd</host>
-        <domain>comasd</domain>
-      </email>
-      <phone>
-        <countryCode>45234</countryCode>
-        <number>12345678234</number>
-      </phone>
-    </customer>
-    <commercial>
-      <size>69420.0</size>
-      <numberOfFloors>2</numberOfFloors>
-      <type>Commercial</type>
-    </commercial>
-  </project>
-  <project type="Roadwork">
-    <projectId>4</projectId>
-    <title>Autobahn A1</title>
-    <budgetEstimate>3000000.0</budgetEstimate>
-    <budget>3000000.0</budget>
+    <title>Dcmonalds Horsens</title>
+    <budgetEstimate>1250000.0</budgetEstimate>
+    <budget>1250000.0</budget>
     <timeEstimate>18</timeEstimate>
     <timeInterval>18</timeInterval>
-    <manHoursEstimate>234556.0</manHoursEstimate>
-    <manHours>234556.0</manHours>
-    <details>From Horsens to Budapest</details>
-    <materials>Concrete, Asphalt</materials>
+    <manHoursEstimate>10.0</manHoursEstimate>
+    <manHours>10.0</manHours>
+    <details>The first one that's going to be opened! (and probably the last...)</details>
+    <materials>Bricks, Concrete, Steel</materials>
     <isArchived>false</isArchived>
-    <startDate>28.12.2028</startDate>
+    <startDate>01.12.2024</startDate>
+    <coverImage>images/restaurant01.png</coverImage>
     <customer>
       <isPrivate>false</isPrivate>
       <name>
-        <firstName>Samo</firstName>
-        <middleName></middleName>
-        <lastName>Knieza</lastName>
+        <firstName>Jenny</firstName>
+        <middleName>Yes</middleName>
+        <lastName>Doe</lastName>
       </name>
       <email>
-        <username>kvecko</username>
-        <host>gmail</host>
+        <username>contact</username>
+        <host>dcmonalds</host>
         <domain>com</domain>
       </email>
       <phone>
-        <countryCode>45</countryCode>
-        <number>60901230</number>
+        <countryCode>00</countryCode>
+        <number>123456789</number>
       </phone>
       <customerCompany>
-        <name>qtek</name>
-        <CVR>42069</CVR>
+        <name>DCMonalds Restaurants</name>
+        <CVR>12057012756</CVR>
       </customerCompany>
     </customer>
-    <roadwork>
-      <length>500000.0</length>
-      <width>4.0</width>
-      <numberOfBridges>0</numberOfBridges>
-      <obstacles>Berlin</obstacles>
-    </roadwork>
+    <commercial>
+      <size>320.0</size>
+      <numberOfFloors>1</numberOfFloors>
+      <type>Commercial</type>
+    </commercial>
   </project>
   <project type="Industrial">
-    <projectId>6</projectId>
-    <title>Chernobyl Power Plant</title>
+    <projectId>3</projectId>
+    <title>Nuclear power plant</title>
     <budgetEstimate>6000000.0</budgetEstimate>
     <budget>6000000.0</budget>
     <timeEstimate>30</timeEstimate>
     <timeInterval>30</timeInterval>
-    <manHoursEstimate>69420.0</manHoursEstimate>
-    <manHours>69420.0</manHours>
-    <details>It won't blow up this time I swear</details>
-    <materials>Bricks, Concrete, Wood, Steel</materials>
+    <manHoursEstimate>999999.0</manHoursEstimate>
+    <manHours>999999.0</manHours>
+    <details>This power plant will be powerful enough to power a city the size of Kopenhagen!</details>
+    <materials>Concrete, Wood, Steel</materials>
     <isArchived>false</isArchived>
-    <startDate>13.12.2023</startDate>
+    <startDate>01.04.2024</startDate>
+    <coverImage>images/powerplant01.png</coverImage>
     <customer>
       <isPrivate>false</isPrivate>
       <name>
-        <firstName>Mike</firstName>
-        <middleName>Dunno</middleName>
-        <lastName>Wazosky</lastName>
+        <firstName>Jack</firstName>
+        <middleName>Mike</middleName>
+        <lastName>Sparrow</lastName>
       </name>
       <email>
-        <username>mike</username>
-        <host>chernobyl</host>
+        <username>contact</username>
+        <host>nuke</host>
         <domain>gov</domain>
       </email>
       <phone>
-        <countryCode>45</countryCode>
-        <number>12345678</number>
+        <countryCode>22</countryCode>
+        <number>123456789</number>
       </phone>
       <customerCompany>
-        <name>MakeChernobylGreatAgain Inc.</name>
-        <CVR>123456789</CVR>
+        <name>Nuke Nuclear Energy</name>
+        <CVR>129490582</CVR>
       </customerCompany>
     </customer>
     <industrial>
-      <size>1.23456789E8</size>
+      <size>5000.0</size>
+      <type>Industrial</type>
+    </industrial>
+  </project>
+  <project type="Roadwork">
+    <projectId>4</projectId>
+    <title>Horsens Tunnel</title>
+    <budgetEstimate>3000000.0</budgetEstimate>
+    <budget>3000000.0</budget>
+    <timeEstimate>18</timeEstimate>
+    <timeInterval>18</timeInterval>
+    <manHoursEstimate>41245.0</manHoursEstimate>
+    <manHours>41245.0</manHours>
+    <details>It will be a direct link between the two cities, lowering the transport times and costs</details>
+    <materials>Concrete, Asphalt, Titanium</materials>
+    <isArchived>false</isArchived>
+    <startDate>01.01.2024</startDate>
+    <coverImage>images/tunnel.png</coverImage>
+    <customer>
+      <isPrivate>false</isPrivate>
+      <name>
+        <firstName>Tiny</firstName>
+        <middleName></middleName>
+        <lastName>Wonderlands</lastName>
+      </name>
+      <email>
+        <username>info</username>
+        <host>tunnels</host>
+        <domain>com</domain>
+      </email>
+      <phone>
+        <countryCode>45</countryCode>
+        <number>21372137</number>
+      </phone>
+      <customerCompany>
+        <name>We Build Tunnels</name>
+        <CVR>515234580</CVR>
+      </customerCompany>
+    </customer>
+    <roadwork>
+      <length>145000.0</length>
+      <width>20.0</width>
+      <numberOfBridges>0</numberOfBridges>
+      <obstacles>the sea</obstacles>
+    </roadwork>
+  </project>
+  <project type="Commercial">
+    <projectId>5</projectId>
+    <title>Astra</title>
+    <budgetEstimate>1250000.0</budgetEstimate>
+    <budget>1250000.0</budget>
+    <timeEstimate>18</timeEstimate>
+    <timeInterval>18</timeInterval>
+    <manHoursEstimate>1233624.0</manHoursEstimate>
+    <manHours>1233624.0</manHours>
+    <details>This will be the tallest building in the world, built on top of Denmark's tallest mountain!</details>
+    <materials>Bricks, Concrete, Wood, Steel</materials>
+    <isArchived>false</isArchived>
+    <startDate>21.06.2024</startDate>
+    <coverImage>images/skyscraper01.png</coverImage>
+    <customer>
+      <isPrivate>false</isPrivate>
+      <name>
+        <firstName>Peter</firstName>
+        <middleName>Dave</middleName>
+        <lastName>Griffin</lastName>
+      </name>
+      <email>
+        <username>petergriffin</username>
+        <host>astra</host>
+        <domain>org</domain>
+      </email>
+      <phone>
+        <countryCode>45</countryCode>
+        <number>58201785</number>
+      </phone>
+      <customerCompany>
+        <name>Astra Skyscraper Solutions</name>
+        <CVR>3582395729</CVR>
+      </customerCompany>
+    </customer>
+    <commercial>
+      <size>5613456.0</size>
+      <numberOfFloors>165</numberOfFloors>
+      <type>Commercial</type>
+    </commercial>
+  </project>
+  <project type="Industrial">
+    <projectId>6</projectId>
+    <title>Garbage Damp</title>
+    <budgetEstimate>6000000.0</budgetEstimate>
+    <budget>6000000.0</budget>
+    <timeEstimate>30</timeEstimate>
+    <timeInterval>30</timeInterval>
+    <manHoursEstimate>10.0</manHoursEstimate>
+    <manHours>10.0</manHours>
+    <details>We are only needed to surround the terrain by a fence. The rest will be done by the company. We don't complain tbh. They said that it totally won't be a racoon habitat...</details>
+    <materials>Bricks, Concrete, Wood, Steel</materials>
+    <isArchived>false</isArchived>
+    <startDate>31.08.2024</startDate>
+    <coverImage>images/garbagedump01.png</coverImage>
+    <customer>
+      <isPrivate>false</isPrivate>
+      <name>
+        <firstName>Todd</firstName>
+        <middleName>Bob</middleName>
+        <lastName>Howard</lastName>
+      </name>
+      <email>
+        <username>todd</username>
+        <host>trash</host>
+        <domain>org</domain>
+      </email>
+      <phone>
+        <countryCode>66</countryCode>
+        <number>352315122</number>
+      </phone>
+      <customerCompany>
+        <name>We Are Totally Not Racoons</name>
+        <CVR>15226457345574</CVR>
+      </customerCompany>
+    </customer>
+    <industrial>
+      <size>12356.0</size>
       <type>Industrial</type>
     </industrial>
   </project>

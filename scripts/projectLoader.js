@@ -1,5 +1,6 @@
 var cardHolder = $("#cardHolder");
 var modalHolder = $("#modalHolder");
+var landingPageProjectHolder = $("#recentProjectBox");
 
 var displayArchiveOnly = cardHolder.hasClass("archive");
 
@@ -28,7 +29,7 @@ $.get("xml/projectDB.xml", function (xml, status) {
         var manHoursEstimate = $(this).find("manHoursEstimate").text();
         var details = $(this).find("details").text();
         var materials = $(this).find("materials").text();
-        var imagePath = $(this).find("imagePath").text();
+        var imagePath = $(this).find("coverImage").text();
         var isArchived = $(this).find("isArchived").text();
         var dateOfCration = $(this).find("startDate").text();
         var timeframeEstimate = $(this).find("timeEstimate").text();
@@ -60,7 +61,7 @@ function printProjectCard(project){
     cardHolderData = cardHolder.html();
 
     if(project.imagePath == ""){
-        project.imagePath = "images/ongoing-projects/house_proj_bob.png";
+        project.imagePath = "images/placeholder.png";
     }
 
     cardHolderData += "<div class=\"col-lg-4 col-md-6\"><a href=\"#\" data-bs-toggle=\"modal\" data-bs-target=\"#modal-id-" + project.id + "\">";
@@ -83,7 +84,7 @@ function printArchivedProjectCard(project){
     cardHolderData = cardHolder.html();
 
     if(project.imagePath == ""){
-        project.imagePath = "images/ongoing-projects/house_proj_bob.png";
+        project.imagePath = "images/placeholder.png";
     }
 
     cardHolderData += "<div class=\"col-lg-4 col-md-6\"><div class=\"card\">";
@@ -117,6 +118,7 @@ function printProjectModal(project){
 
 function renderAllProjects(sortOrder = "4", projectType = "Any", filterString = ""){
     cardHolder.html("");
+    landingPageProjectHolder.html("");
 
     arrayToDisplay = displayOnlyType(filterProjectTitles(projectArray, filterString), projectType);
 
@@ -138,14 +140,39 @@ function renderAllProjects(sortOrder = "4", projectType = "Any", filterString = 
             break;
     }
 
-    arrayToDisplay.forEach(project => {
-        if(project.isArchived == "false" && displayArchiveOnly == false){
-            printProjectCard(project);
+    var displayedProjects = 0;
+
+    if(landingPageProjectHolder.html() != undefined){
+        console.log("Doing landing page stuff")
+        var maxProjectsToDisplay = 3;
+        var lengthOfArray = arrayToDisplay.length;
+        var startIndex = Math.max(0, lengthOfArray - maxProjectsToDisplay);
+        for(var i = startIndex; i < lengthOfArray; i++){
+            printTitleProjectCard(arrayToDisplay[i]);
         }
-        else if(project.isArchived == "true" && displayArchiveOnly == true){
-            printArchivedProjectCard(project);
-        }
-    });
+    }
+    else{
+        console.log("Doing project view stuff")
+        arrayToDisplay.forEach(project => {
+            if(project.isArchived == "false" && displayArchiveOnly == false){
+                printProjectCard(project);
+                displayedProjects++;
+            }
+            else if(project.isArchived == "true" && displayArchiveOnly == true){
+                printArchivedProjectCard(project);
+                displayedProjects++;
+            }
+        });
+    }
+
+    if(displayedProjects == 0){
+        cardHolder.html("<div class=\"v-spacer-200\"></div><h1 class=\"dark-text tal-center\">No projects meeting your search criteria</h1><div class=\"v-spacer-800\"></div>");
+    }
+
+    if(displayedProjects < 4){
+        cardHolder.html(cardHolder.html() + "<div class=\"v-spacer-350\"></div>");
+    
+    }
 }
 
 function renderAllModals(){
@@ -254,4 +281,23 @@ function filterProjectTitles(inputArray, filterString = ""){
     });
 
     return newProjectArray;
+}
+
+function printTitleProjectCard(project){
+    htmlData = landingPageProjectHolder.html();
+
+    if(project.imagePath == ""){
+        project.imagePath = "images/placeholder.png";
+    }
+
+    link = project.isArchived == "true" ? "project-archive.html" : "ongoing-projects.html";
+
+    htmlData += "<div class=\"col-lg-3 col-sm-8 backg-orange img-fluid overflow-hidden p-0 rounded\"><a href=\"" + link + "\" style=\"text-decoration:none;color:white\">"
+    htmlData += "<img src=\"" + project.imagePath + "\" class=\"height-fix-images-projects\" alt=\"" + project.title + "\">"
+    htmlData += "<div class=\"row text-cente mt-2 mb-2 justify-content-evenly\">"
+    htmlData += "<div class=\"col pt-1 pl-0 ms-2\"><h4>" + project.title + "</h4></div>"
+    htmlData += "<div class=\"col\"><button type=\"button\" class=\"btn rcb btn-light\">More</button></div>"
+    htmlData += "</div></a></div>"
+
+    landingPageProjectHolder.html(htmlData);
 }
